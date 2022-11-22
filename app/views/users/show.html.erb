@@ -1,0 +1,14 @@
+<h1>My Bookings</h1>
+
+<% @user.bookings.each do |booking| %>
+    <li><%= user.booking %></li>
+  <ul>
+    <%= link_to "🗑",
+        bookmark_path(bookmark),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  </ul>
+<% end %>
+
+
+<p><%= link_to "Add New Bookmark", new_list_bookmark_path(@list) %></p><br>
+<p><%= link_to "Back to all lists", lists_path(@list) %></p>
