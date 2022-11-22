@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner mt-10 w-100 bg-light d-flex flex-column justify-content-center align-items-center">
+  <h1>Fluffy Friend</h1>
+  <h2>Borrow a pet if you can't commit to a pet full time 🐾</h2>
+  <%= link_to "Rent now", new_booking_path, class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
+</div>
+
+  <div class="map-container d-flex justify-content-center mt-4">
+    <%= image_tag "https://dogsbestlife.com/wp-content/uploads/2021/02/cats-vs.-dogs-group-scaled.jpeg",
+        class: "rounded-4",
+        style: "width: 1600px; height: 450px; object-fit:cover;" %>
+  </div>
