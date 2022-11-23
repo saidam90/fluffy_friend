@@ -4,29 +4,28 @@
     <div class="card">
       <%= image_tag "puppy.jpeg", alt: "pets_picture", width:100 %>
       <%# <div class="container">
-      <h4><b><%= link_to pet.name, pet_path(pet) %></b></h4>
+      <h4><b><%= link_to pet.name, pet_path(pet) %>
       <%# </div>
     </div>
   </div>
-</div> %> %> %>
-<%# <% end %> %>
+</div> %>
+<%# <% end %>
 
 <div class="card-group">
   <% @pets.each do |pet| %>
-<<<<<<< HEAD
-    <li><%= pet.name %></li>
-  <% end %>
-</ul>
-=======
-    <div class="card w-25">
-      <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
-      <%= image_tag "puppy.jpeg", alt: "pets_picture", width:200 %>
-      <div class="card-body">
-        <h5 class="card-title">title</h5>
-        <p class="card-text">This</p>
-        <p class="card-text"><small class="text-muted">Last</small></p> %>
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        Breakfast
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+       Breakfast
       </div>
     </div>
   <% end %>
 </div>
->>>>>>> 4227bf54fecdd379ad434ad7c605f557509eb470
