@@ -2,7 +2,7 @@
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);">
     <div class="container">
       <h1><%= @pet.name %></h1>
-      <p>£20.00</p>
+      <p>£20.00 per hour</p>
       <%# <a class="btn btn-flat" href="#">Rent me</a> %>
       <%= link_to "Rent me", new_pet_booking_path(@pet), class: "btn btn-flat" %>
     </div>
@@ -27,25 +27,27 @@
       <span class="fa fa-star"></span>
       <span class="fa fa-star"></span>
       <h2 class="leader">
-        My Reviews
+        <%= link_to "My reviews ⭐", new_booking_path, class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
       </h2>
     </div>
     <div class="card-owner-info">
-      <h1 >
+      <h1 class="leader">
         I am the fluffy child of
       </h1>
-      <h2 class="leader">
+      <h2>
         <%= @pet.user.first_name %> <%= @pet.user.last_name %>
       </h2>
+      <%= link_to "Message 💬", new_booking_path, class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
     </div>
     <div class="card-about-info">
-      <h1 >
+      <h1 class="leader">
         About me
       </h1>
-      <h2 class="leader">
+      <h2>
         I am a cheeky little whippersnapper that likes long walks on the beach and alot of attention
       </h2>
     </div>
+
   <div>
   </div>
 
