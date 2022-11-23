@@ -4,6 +4,7 @@
   padding: 150px 0;
   width: 150%;
   border-radius: 30px;
+  height: 600px;
 }
 
 .banner h1 {
@@ -38,11 +39,11 @@
   justify-content: space-around;
   width: 90%;
   margin-top: 30px;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-left: 30px;
 }
 
-.card-pet-info {
+.card-pet-info, .card-owner-info, .card-about-info {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 90%;
   margin: auto;
@@ -53,11 +54,12 @@
 
 .cards {
   display: flex;
-  align-items: centre;
+  // align-items: centre;
   flex-direction: column;
-  max-width: 90%;
-  margin-left: 50px;
-  align-items: flex-end;
+  width: 700px;
+  margin-left: 30px;
+  // margin-left: 50px;
+  // align-items: stretch;
 }
 
 .cards h1 {
@@ -80,4 +82,12 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.card-pet-info, .card-owner-info, .card-about-info {
+  width: 130%
+}
+.card-owner-info {
+  width: 130%
+
 }
