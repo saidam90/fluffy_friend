@@ -3,7 +3,7 @@
     <div class="container">
       <h1><%= @pet.name %></h1>
       <p>£20.00ph</p>
-      <a class="btn btn-flat" href="#">Rent me</a>
+      <%= link_to "Book me 📖", new_booking_path, class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
     </div>
   </div>
   <div class="cards">
@@ -26,25 +26,27 @@
       <span class="fa fa-star"></span>
       <span class="fa fa-star"></span>
       <h2 class="leader">
-        My Reviews
+        <%= link_to "My reviews ⭐", new_booking_path, class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
       </h2>
     </div>
     <div class="card-owner-info">
-      <h1 >
+      <h1 class="leader">
         I am the fluffy child of
       </h1>
-      <h2 class="leader">
+      <h2>
         <%= @pet.user.first_name %> <%= @pet.user.last_name %>
       </h2>
+      <%= link_to "Message 💬", new_booking_path, class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
     </div>
     <div class="card-about-info">
-      <h1 >
+      <h1 class="leader">
         About me
       </h1>
-      <h2 class="leader">
+      <h2>
         I am a cheeky little whippersnapper that likes long walks on the beach and alot of attention
       </h2>
     </div>
+
   <div>
   </div>
 
