@@ -1,5 +1,32 @@
-<ul>
+<%# <% @pets.each do |pet| %> %>
+<%# <div class="row">
+  <div class="column">
+    <div class="card">
+      <%= image_tag "puppy.jpeg", alt: "pets_picture", width:100 %>
+      <%# <div class="container">
+      <h4><b><%= link_to pet.name, pet_path(pet) %></b></h4>
+      <%# </div>
+    </div>
+  </div>
+</div> %> %> %>
+<%# <% end %> %>
+
+<div class="card-group">
   <% @pets.each do |pet| %>
+<<<<<<< HEAD
     <li><%= pet.name %></li>
   <% end %>
 </ul>
+=======
+    <div class="card w-25">
+      <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+      <%= image_tag "puppy.jpeg", alt: "pets_picture", width:200 %>
+      <div class="card-body">
+        <h5 class="card-title">title</h5>
+        <p class="card-text">This</p>
+        <p class="card-text"><small class="text-muted">Last</small></p> %>
+      </div>
+    </div>
+  <% end %>
+</div>
+>>>>>>> 4227bf54fecdd379ad434ad7c605f557509eb470
