@@ -8,21 +8,34 @@
   </div>
   <div class="cards">
     <div class="card-pet-info">
-      <h1 >
-        <%= @pet.name %>
+      <h1 class="leader" >
+       <%= @pet.name %>
       </h1>
       <h2 >
-        <%= @pet.age %>
+        <%= @pet.age %> years old
       </h2>
       <h2 >
-        <%= @pet.breed %>
+        <%= @pet.breed.capitalize %>
       </h2>
       <h2 >
-        <%= @pet.location %>
-        </h2>
-      <h2>
-        <%= @pet.category %>
-        </h2>
+        Come pick me up from <%= @pet.location %> !
+      </h2>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <h2 class="leader">
+        My Reviews
+      </h2>
+    </div>
+    <div class="card-pet-info">
+      <h1 >
+        I am the fluffy child of
+      </h1>
+      <h2 class="leader">
+        <%= @pet.user.first_name %> <%= @pet.user.last_name %>
+      </h2>
     </div>
   <div>
   </div class="owner-info">
