@@ -2,7 +2,8 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  width: 50%;
+  width: 150%;
+  border-radius: 30px;
 }
 
 .banner h1 {
@@ -37,11 +38,13 @@
   justify-content: space-around;
   width: 90%;
   margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 30px;
 }
 
 .card-pet-info {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 90%;
   margin: auto;
   text-align: center;
   border-radius: 20px;
@@ -50,14 +53,31 @@
 
 .cards {
   display: flex;
+  align-items: centre;
   flex-direction: column;
+  max-width: 90%;
+  margin-left: 50px;
+  align-items: flex-end;
 }
 
 .cards h1 {
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 100;
 }
 
 .cards h2 {
-  font-size: 10px;
+  font-size: 18px;
+}
+
+.checked {
+  color: orange;
+}
+
+.leader {
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
