@@ -1,43 +1,23 @@
 // Specific CSS for your home-page
-.cards {
-  display: grid;
-  height: 300px;
-  width: 500px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+
+.banner-home {
+ h1 {
+  font-size: 70px !important;
+  color: black !important;
+}
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+.btn-yellow{
+  background-color: rgb(199, 165, 31);
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 20px;
+  font-weight: bolder;
+  margin: 20px;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.btn-yellow:hover{
+  background-color: rgb(122, 101, 17);
+  color: white;
 }
