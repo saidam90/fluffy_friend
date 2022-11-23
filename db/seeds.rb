@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'faker'
+Pet.destroy_all
 
 3.times do
   user = User.create!(
@@ -18,9 +19,9 @@ require 'faker'
   )
   10.times do
     pet = Pet.new(
-      name: Faker::Name.name,
-      category: Faker::Creature::Animal.name,
-      breed: Faker::Creature::Animal.name,
+      name: ["Maya", "Gus", "Mr Humphries", "Pochita", "Bubble", "Rex"].sample,
+      category: ["dog", "cat", "hamster", "bird", "rabbit", "horse", "fish", "guinea pig"].sample,
+      breed: ["poodle", "bulldog", "scottish fold", "beagle", "golden retriever", "labrador"].sample,
       age: Faker::Number.number(digits: 2),
       location: Faker::Address.street_address
     )

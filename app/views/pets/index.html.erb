@@ -1,15 +1,19 @@
 <div class="container-fluid container py-3 mt-4">
   <h2 class="h3">Become our friends!</h2>
-    <div class="petcard">
-      <% @pets.each do |pet| %>
-        <div class="mt-4">
+  <div class="petcard">
+    <% @pets.each do |pet| %>
+      <div class="mt-4">
           <div class="card mb-3">
-            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*" class="card-img-top" alt="...">
-              <div class="card-body">
-              <h5><%= link_to pet.name, pet_path(pet) %></h5>
-              </div>
+           <%= link_to pet_path(pet), class: "card-img-top" do %>
+            <%= image_tag "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" %>
+          <% end %>
+          <div class="card-body">
+            <h5><%= pet.name %></h5>
+            <h5><%= pet.category %></h5>
+            <h5><%= pet.age %></h5>
+          </div>
           </div>
         </div>
-      <% end %>
-    </div>
+    <% end %>
+  </div>
 </div>
