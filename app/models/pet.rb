@@ -1,4 +1,5 @@
 class Pet < ApplicationRecord
+  has_many :bookings
   belongs_to :user
 
   validates :category, presence: true
