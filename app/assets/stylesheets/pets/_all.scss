@@ -1,0 +1,17 @@
+.petcard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  width: 100%;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  img {
+  }
+}
+
+.card-body {
+  text-align: center;
+}
