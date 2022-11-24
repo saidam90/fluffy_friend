@@ -6,6 +6,7 @@
     <%= f.input :breed %>
     <%= f.input :age %>
     <%= f.input :location %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.submit "Add", class: "btn btn-primary",
       data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to rent #{@pet.name}?"} %>
   <% end %>

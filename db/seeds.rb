@@ -37,15 +37,15 @@ User.destroy_all
 user = User.create!(
   first_name: Faker::Name.name,
   last_name: Faker::Name.name,
-  email: Faker::Internet.email,
+  email: "tommy@gmail.com",
   password: "123456"
   # owner: [true, false].sample
 )
 
 file_1 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669242823/zklvy9vui30hajgrq9gu.jpg")
 pet_1 = Pet.create!(name: "Mr Humphries", category: "hamster", breed: "syrian hamster", age: 5, location: Faker::Address.street_address, user: user)
-pet_1.photo.attach(io: file_1, filename:"nes.jpg", content_type: "image/jpg")
+pet_1.photos.attach(io: file_1, filename:"nes.jpg", content_type: "image/jpg")
 
 file_2 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669244345/omlqztwdajacqieuocpq.jpg")
 pet_2 = Pet.create!(name: "Bubble", category: "dog", breed: "pug", age: 4, location: Faker::Address.street_address, user: user)
-pet_2.photo.attach(io: file_2, filename:"nes.jpg", content_type: "image/jpg")
+pet_2.photos.attach(io: file_2, filename:"nes.jpg", content_type: "image/jpg")
