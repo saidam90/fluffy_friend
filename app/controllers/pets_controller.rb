@@ -38,3 +38,4 @@ class PetsController < ApplicationController
   def pet_params
     params.require(:pet).permit(:category, :breed, :name, :age, :location, photos: [])
   end
+  end
