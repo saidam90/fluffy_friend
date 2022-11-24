@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
+    @reviews = Review.all
   end
 
   def create
@@ -14,6 +15,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @reviews = Review.where(pet_id: @pet.reviews)
   end
 
   private

@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1><strong>Reviews</strong></h1>
+
+  <% total = 0 %>
+    <% @reviews.each do |review| %>
+        <% total += review.rating.to_f %>
+      <% end %>
+      <h2 class="column">My average rating is <%= (total.to_f / @reviews.length).round(1) %></h2>
+      <% (total.to_f / @reviews.length).round(0).times do |star| %>
+      <span class="fa fa-star checked"> </span>
+    <% end %>
+
+  <ol>
+  <h2>people have said about me...</h2>
+    <% @reviews.each do |review| %>
+
+      <li class ="review-card">
+        <%= review.comment.downcase %> <br>
+        <%= review.rating %>
+
+      </li>
+      <% end %>
+      </ol>
+</div>
+<% (total.to_f / @reviews.length).round(0).times do |star| %>
+      <span class="fa fa-star checked"> </span>
+    <% end %>
