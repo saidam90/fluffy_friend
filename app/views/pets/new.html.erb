@@ -2,8 +2,8 @@
   <h1>Add a pet</h1>
   <%= simple_form_for [@pet] do |f| %>
     <%= f.input :name %>
-    <%= f.input :category %>
-    <%= f.input :breed, collection: ["dog", "cat", "fish"] %>
+    <%= f.input :category, collection: ["Dog", "Cat", "Hamster", "Rabbit"] %>
+    <%= f.input :breed %>
     <%= f.input :age %>
     <%= f.input :location %>
     <%= f.submit "Add", class: "btn btn-primary" %>
