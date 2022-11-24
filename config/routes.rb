@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :pets do
     resources :bookings, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :show, :index]
   end
+  #route to create review form
+
   resources :bookings, only: [:index]
 end

@@ -1,10 +1,12 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
+    @reviews = Review.all
   end
 
   def show
     @pet = Pet.find(params[:id])
+    @reviews = Review.where(pet_id: @pet.reviews)
   end
 
   def new
