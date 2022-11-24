@@ -15,7 +15,7 @@ class PetsController < ApplicationController
     @pet = Pet.new(list_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to pets_path, notice: "Pet added successfully."
+      redirect_to pets_path, notice: " #{@pet.name} added successfully."
 
     else
       render :new, status: :unprocessable_entity
@@ -36,6 +36,6 @@ class PetsController < ApplicationController
   private
 
   def list_params
-    params.require(:pet).permit(:category, :breed, :name, :age, :location)
+    params.require(:pet).permit(:category, :species, :breed, :name, :age, :location)
   end
 end

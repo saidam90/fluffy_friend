@@ -2,11 +2,10 @@
   <h1>Add a pet</h1>
   <%= simple_form_for [@pet] do |f| %>
     <%= f.input :name %>
-    <%= f.input :category %>
+    <%= f.input :category, collection: ["Dog", "Cat", "Hamster", "Rabbit"] %>
     <%= f.input :breed %>
     <%= f.input :age %>
     <%= f.input :location %>
-    <%= f.submit "Add", class: "btn btn-primary",
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to rent #{@pet.name}?"} %>
-  <% end %>
+    <%= f.submit "Add", class: "btn btn-primary" %>
+      <% end %>
 </div>
