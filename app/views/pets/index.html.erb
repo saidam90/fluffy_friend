@@ -4,9 +4,9 @@
     <% @pets.each do |pet| %>
       <div class="mt-4">
           <div class="card mb-3">
-           <%= link_to pet_path(pet), class: "card-img-top" do %>
-            <%= image_tag "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" %>
-          <% end %>
+            <%= link_to pet_path(pet), class: "card-img-top" do %>
+            <%= cl_image_tag pet.photo.key %>
+            <% end %>
           <div class="card-body">
             <h5><%= pet.name %></h5>
             <h5><%= pet.category %></h5>
