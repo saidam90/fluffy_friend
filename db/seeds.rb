@@ -49,3 +49,19 @@ pet_1.photos.attach(io: file_1, filename:"nes.jpg", content_type: "image/jpg")
 file_2 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669244345/omlqztwdajacqieuocpq.jpg")
 pet_2 = Pet.create!(name: "Bubble", category: "dog", breed: "pug", age: 4, location: Faker::Address.street_address, user: user)
 pet_2.photos.attach(io: file_2, filename:"nes.jpg", content_type: "image/jpg")
+
+file_3 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669308146/development/2plypozksjfhciktf4he38fvoshl.jpg")
+pet_3 = Pet.create!(name: "Birdie", category: "bird", breed: "woodpecker", age: 5, location: Faker::Address.street_address, user: user)
+pet_3.photos.attach(io: file_3, filename:"nes.jpg", content_type: "image/jpg")
+
+file_4 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669308152/development/0kh97wawhgq9arxdoftdkhnfpnq2.jpg")
+pet_4 = Pet.create!(name: "Neko", category: "cat", breed: "birman", age: 8, location: Faker::Address.street_address, user: user)
+pet_4.photos.attach(io: file_4, filename:"nes.jpg", content_type: "image/jpg")
+
+file_5 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669308155/development/9r63mvg9gu4lxwglxajiao5heo3l.jpg")
+pet_5 = Pet.create!(name: "Makima", category: "rabbit", breed: "havana", age: 6, location: Faker::Address.street_address, user: user)
+pet_5.photos.attach(io: file_5, filename:"nes.jpg", content_type: "image/jpg")
+
+file_6 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669307994/qch64wbkxcrpqz4oq72y.jpg")
+pet_6 = Pet.create!(name: "Dumbo", category: "elephant", breed: "bush", age: 10, location: Faker::Address.street_address, user: user)
+pet_6.photos.attach(io: file_6, filename:"nes.jpg", content_type: "image/jpg")
