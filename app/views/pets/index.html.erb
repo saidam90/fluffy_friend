@@ -5,7 +5,7 @@
       <div class="mt-4">
           <div class="card mb-3">
             <%= link_to pet_path(pet), class: "card-img-top" do %>
-            <%= cl_image_tag pet.photo.key %>
+            <%= cl_image_tag pet.photos[0].key %>
             <% end %>
           <div class="card-body">
             <h5><%= pet.name %></h5>
