@@ -6,17 +6,19 @@
   <div class ="review-row">
     <div class="review-column profile-col">
       <% total = 0 %>
-        <% @reviews.each do |review| %>
+      <%# <% if @pet.reviews.length > 0 %> %>
+        <% @pet.reviews.each do |review| %>
             <% total += review.rating.to_f %>
           <% end %>
-          <h2> <%= @pet.name  %> <br> <%= (total.to_f / @reviews.length).round(1) %></h2>
-          <% (total.to_f / @reviews.length).round(0).times do |star| %>
+          <h2> <%= @pet.name  %> <br> <%= (total.to_f / @pet.reviews.length).round(1) %></h2>
+          <% (total.to_f / @pet.reviews.length).round(0).times do |star| %>
           <span class="fa fa-star checked"> </span>
         <% end %>
+      <%# <% end %> %>
     </div>
       <div class="review-column ratings-col">
         <ol>
-          <% @reviews.each do |review| %>
+          <% @pet.reviews.each do |review| %>
 
             <li class ="review-card">
               <%= review.comment.downcase %> <br>
