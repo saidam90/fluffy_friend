@@ -24,16 +24,14 @@ class PetsController < ApplicationController
     end
   end
 
-  # def edit
-  # end
-
-  # def update
-  #   if @pet.update(list_params)
-  #     redirect_to pets_path, notice: "Pet updated successfully."
-  #   else
-  #     render :edit, status: :unprocessable_entity
-  #   end
-  # end
+  def show
+    @pet = Pet.find(params[:id])
+    @marker = [{
+      lat: @pet.latitude,
+      lng: @pet.longitude,
+      info_window: render_to_string(partial: "info_window", locals: {pet: @pet})
+    }]
+  end
 
   private
 

@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+  <div class="container-fluid ">
     <%= link_to root_path, class: "navbar-brand" do %>
 
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/4966/4966193.png" %>
@@ -14,12 +14,15 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <li class="nav-item">
+              <%= link_to "Home", new_user_session_path, class: "nav-link font-weight: 900" %>
+            </li>
+            <%= image_tag "https://cdn-icons-png.flaticon.com/512/7784/7784793.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-              <%= link_to "My Bookings", "#", class: "dropdown-item" %>
+              <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
 
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Add a pet", new_pet_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

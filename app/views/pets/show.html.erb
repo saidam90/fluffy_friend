@@ -1,65 +1,73 @@
-<div class="show-container">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @pet.photos[0].key %>');">
-    <div class="container">
-      <h1><%= @pet.name %></h1>
-      <p>£20.00 per hour</p>
-      <%# <a class="btn btn-flat" href="#">Rent me</a> %>
-      <%= link_to "Rent me", new_pet_booking_path(@pet), class: "btn btn-flat" %>
+
+<div class="container">
+  <div class="show-container">
+    <div class="banner-pet" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
+      <div class="container">
+        <h1>I'm <%= @pet.name %></h1>
+        <%= link_to "Play with me!", new_pet_booking_path(@pet), class: "btn btn-flat" %>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card-pet-info">
+        <h2 class="leader" >
+        Name: <%= @pet.name %>
+        </h2>
+        <h2 >
+          Age: <%= @pet.age %> years old
+        </h2>
+        <h2 >
+          Breed: <%= @pet.breed.capitalize %>
+        </h2>
+        <h2>
+          Price: £20.00 per hour
+        </h2>
+        <h2 >
+          Come pick me up from <%= @pet.location %> !
+        </h2>
+        
+        <%# counter for the review total %>
+        <% total = 0 %>
+        <%# sum the review total %>
+        <% @reviews.each do |review| %>
+          <% total += review.rating.to_f %>
+         <% end %>
+        <%# give the average to 1 decimal place %>
+       <span><%= (total.to_f / @reviews.length).round(1) %></span>
+        <%# give the number of stars for rounded average rating %>
+        <% (total.to_f / @reviews.length).round(0).times do |star| %>
+          <span class="fa fa-star checked"> </span>
+        <% end %>
+        <h2 class="leader">
+          <%= link_to "My reviews ⭐", pet_reviews_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
+          <%= link_to "Leave a review 🖊️", new_pet_review_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
+          <h2 class="leader">People have said about me...</h2>
+          <p><%= (@reviews[rand(@reviews.length)].comment) %> </p>
+        </>
+      </div>
+      
+      <div class="card-about-info">
+        <h1 class="leader">
+          About me
+        </h1>
+        <h2>
+          I am a cheeky little whippersnapper that likes long walks on the beach and a lot of attention! I am the fluffy child of <span> <%= @pet.user.first_name %>. </span>
+          <br>
+          <%= link_to "Message 💬", "", class: "btn btn-primary text-white rounded-lg" %>
+        </h2>
+      </div>
     </div>
   </div>
-  <div class="cards">
-    <div class="card-pet-info">
-      <h1 class="leader" >
-       <%= @pet.name %>
-      </h1>
-      <h2 >
-        <%= @pet.age %> years old
-      </h2>
-      <h2 >
-        <%= @pet.breed.capitalize %>
-      </h2>
-      <h2 >
-        Come pick me up from <%= @pet.location %> !
-      </h2>
-      <%# counter for the review total %>
-      <% total = 0 %>
-      <%# sum the review total %>
-  <% @reviews.each do |review| %>
-      <% total += review.rating.to_f %>
-    <% end %>
-    <%# give the average to 1 decimal place %>
-    <span><%= (total.to_f / @reviews.length).round(1) %></span>
-    <%# give the number of stars for rounded average rating %>
-    <% (total.to_f / @reviews.length).round(0).times do |star| %>
-      <span class="fa fa-star checked"> </span>
-    <% end %>
-      <h2 class="leader">
-        <%= link_to "My reviews ⭐", pet_reviews_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
-        <%= link_to "Leave a review 🖊️", new_pet_review_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
-        <h2 class="leader">People have said about me...</h2>
-        <p><%= (@reviews[rand(@reviews.length)].comment) %> </p>
-      </>
-    </div>
-    <div class="card-owner-info">
-      <h1 class="leader">
-        I am the fluffy child of
-      </h1>
-      <h2>
-        <%= @pet.user.first_name %> <%= @pet.user.last_name %>
-      </h2>
-      <%= link_to "Message 💬", "", class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
-    </div>
-    <div class="card-about-info">
-      <h1 class="leader">
-        About me
-      </h1>
-      <h2>
-        I am a cheeky little whippersnapper that likes long walks on the beach and alot of attention
-      </h2>
-    </div>
+</div>
+<br>
 
-  <div>
-  </div>
 
+<div class="container">
+  <h2>
+  <%= @pet.name %> 's address:
+  </h2>
+  <div style="width: 100%; height: 500px;"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>

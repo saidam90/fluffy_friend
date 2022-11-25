@@ -1,0 +1,138 @@
+.banner-pet {
+  background-size: cover;
+  background-position: 50% 65%;
+  padding: 150px 0;
+  width: 130%;
+  border-radius: 30px;
+  height: 500px;
+  position: relative;
+}
+.banner-pet h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 35px;
+  font-weight: bold;
+  font-family: Montserrat;
+  position: absolute;
+  top: 17px;
+  margin-left: 270px;
+
+}
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-family: Montserrat;
+}
+.btn-flat {
+  color: white;
+  font-size: 15px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: #cb8c34;
+  transition: background 0.3s ease;
+  position: absolute;
+  bottom: 25px;
+  margin-left: 290px;
+}
+.btn-flat:hover {
+  background: #4a3b09;
+  color: white;
+}
+.show-container {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+.card-pet-info, .card-owner-info, .card-about-info {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: rgb(255, 255, 255);
+  font-family: Montserrat;
+}
+.cards {
+  display: flex;
+  font-family: Montserrat;
+  // align-items: centre;
+  flex-direction: column;
+  width: 700px;
+  margin-left: 30px;
+  margin-right: 20px;
+  padding: 25px 10px;
+  // margin-left: 50px;
+  // align-items: stretch;
+}
+.cards h1 {
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+.cards h2 {
+  font-size: 15px;
+  font-family: Montserrat;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 15px;
+  font-family: Montserrat;
+}
+
+.checked {
+  color: orange;
+}
+
+.leader {
+  font-size: 15px;
+  background-image: linear-gradient(to left, #404946, #1b191e);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin: 0px;
+  h1{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #c89b1e;
+  }
+  h2{
+    font-size: 15px;
+    color: #4a3b09;
+  }
+  .btn-primary{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    padding: 10px;
+  }
+}
+
+
+.card-pet-info, .card-owner-info, .card-about-info {
+  width: 130%
+}
+
+.card-about-info{
+  .btn-primary {
+    font-size: 15px;
+    background-color: #cb8c34;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.container{
+  h2{
+    font-size: 15px;
+  }
+}
