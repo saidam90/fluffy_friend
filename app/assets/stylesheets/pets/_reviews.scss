@@ -1,26 +1,58 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.review-column {
+  width:40%;
+}
+
+.review-row {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 30px;
+  flex-direction: row;
+}
+
 .review-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 95%;
+    // width: 95%;
     margin: auto;
     text-align: center;
     // border-radius: 20px;
-    padding: 15px;
+    padding: 5px;
     background-color: rgb(255, 255, 255);
-    margin: 40 px;
+    margin: 5 px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.profile-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 95%;
-  margin: auto;
+
+h1 {
   text-align: center;
-  border-radius: 20px;
-  padding: 15px;
-  background-color: rgb(255, 255, 255);
 }
 
-.h1 {
+.ratings-col {
+  display:flex;
+  flex-direction: column;
+  margin: auto;
   text-align: center;
+  background-color: rgb(255, 255, 255);
+  width: 30%;
+}
+
+.profile-col {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+
 }

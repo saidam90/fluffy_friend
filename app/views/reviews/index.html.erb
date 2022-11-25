@@ -1,28 +1,35 @@
 
 <div class="container">
   <h1><strong>Reviews</strong></h1>
+  <%= link_to "Back to my profile", pet_path(@pet), class: "btn btn-flat" %>
+  <%= link_to "Back to all pets", pets_path(@pets), class: "btn btn-flat" %>
+  <div class ="review-row">
+    <div class="review-column profile-col">
+      <% total = 0 %>
+        <% @reviews.each do |review| %>
+            <% total += review.rating.to_f %>
+          <% end %>
+          <h2> <%= @pet.name  %> <br> <%= (total.to_f / @reviews.length).round(1) %></h2>
+          <% (total.to_f / @reviews.length).round(0).times do |star| %>
+          <span class="fa fa-star checked"> </span>
+        <% end %>
+    </div>
+      <div class="review-column ratings-col">
+        <ol>
+          <% @reviews.each do |review| %>
 
-  <% total = 0 %>
-    <% @reviews.each do |review| %>
-        <% total += review.rating.to_f %>
-      <% end %>
-      <h2 class="column">My average rating is <%= (total.to_f / @reviews.length).round(1) %></h2>
-      <% (total.to_f / @reviews.length).round(0).times do |star| %>
-      <span class="fa fa-star checked"> </span>
-    <% end %>
+            <li class ="review-card">
+              <%= review.comment.downcase %> <br>
+              <%= review.rating %>
+              <% review.rating.times do |star| %>
+                <span class="fa fa-star checked"> </span>
+              <% end %>
 
-  <ol>
-  <h2>people have said about me...</h2>
-    <% @reviews.each do |review| %>
+            </li>
+            <% end %>
+            </ol>
 
-      <li class ="review-card">
-        <%= review.comment.downcase %> <br>
-        <%= review.rating %>
 
-      </li>
-      <% end %>
-      </ol>
+    </div>
+  </div>
 </div>
-<% (total.to_f / @reviews.length).round(0).times do |star| %>
-      <span class="fa fa-star checked"> </span>
-    <% end %>
