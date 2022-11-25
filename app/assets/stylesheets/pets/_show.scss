@@ -11,12 +11,12 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   font-family: Montserrat;
   position: absolute;
   top: 17px;
-  margin-left: 270px;
+  margin-left: 260px;
 
 }
 .banner p {
@@ -26,6 +26,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   font-family: Montserrat;
 }
+
 .btn-flat {
   color: white;
   font-size: 15px;
@@ -37,10 +38,12 @@
   bottom: 25px;
   margin-left: 290px;
 }
+
 .btn-flat:hover {
   background: #4a3b09;
   color: white;
 }
+
 .show-container {
   display: flex;
   justify-content: space-around;
@@ -49,16 +52,18 @@
   margin-right: 20px;
   margin-left: 30px;
 }
+
 .card-pet-info, .card-owner-info, .card-about-info {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   width: 95%;
   margin: auto;
   text-align: center;
   border-radius: 20px;
-  padding: 15px;
+  padding: 5px;
   background-color: rgb(255, 255, 255);
   font-family: Montserrat;
 }
+
 .cards {
   display: flex;
   font-family: Montserrat;
@@ -71,21 +76,21 @@
   // margin-left: 50px;
   // align-items: stretch;
 }
+
 .cards h1 {
   font-size: 20px;
   font-family: Montserrat;
   font-weight: 100;
   margin-bottom: 5px;
 }
-.cards h2 {
-  font-size: 15px;
-  font-family: Montserrat;
-  margin-bottom: 5px;
-}
 
-h2 {
-  font-size: 15px;
-  font-family: Montserrat;
+.cards{
+  h2 {
+    font-size: 15px;
+    font-family: Montserrat;
+    margin-bottom: 5px;
+    margin: 5px;
+  }
 }
 
 .checked {
@@ -98,7 +103,9 @@ h2 {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  margin: 0px;
+  margin: 7px;
+  padding: 0px;
+
   h1{
     font-size: 20px;
     font-weight: bolder;
@@ -108,12 +115,13 @@ h2 {
     font-size: 15px;
     color: #4a3b09;
   }
-  .btn-primary{
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 2px;
-    padding: 10px;
-  }
+  // .btn-primary{
+  //   font-size: 10px;
+  //   margin-top: 10px;
+  //   margin-bottom: 2px;
+  //   padding: 10px;
+  //   color: white;
+  // }
 }
 
 
@@ -126,13 +134,15 @@ h2 {
     font-size: 15px;
     background-color: #cb8c34;
     padding: 10px 15px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
+
   }
 }
 
 .container{
   h2{
     font-size: 15px;
+    font-family: Montserrat;
   }
 }
