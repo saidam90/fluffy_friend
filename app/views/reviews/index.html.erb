@@ -1,22 +1,27 @@
 
 <div class="container">
   <h1><strong>Reviews</strong></h1>
-  <%= link_to "Back to my profile", pet_path(@pet), class: "btn btn-flat" %>
-  <%= link_to "Back to all pets", pets_path(@pets), class: "btn btn-flat" %>
-  <div class ="review-row">
-    <div class="review-column profile-col">
-      <% total = 0 %>
-        <% @reviews.each do |review| %>
-            <% total += review.rating.to_f %>
-          <% end %>
-          <h2> <%= @pet.name  %> <br> <%= (total.to_f / @reviews.length).round(1) %></h2>
-          <% (total.to_f / @reviews.length).round(0).times do |star| %>
-          <span class="fa fa-star checked"> </span>
-        <% end %>
+  <div class ="main">
+  <div class="image-box">
+  <img  src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+  </div>
+
+    <%# <div class="banner-pet" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)"> %>
     </div>
-      <div class="review-column ratings-col">
+    <div class="content-box">
+    <% total = 0 %>
+    <h2> About Me <%= @pet.name %></h2>
+      <% @pet.reviews.each do |review| %>
+        <% total += review.rating.to_f %>
+      <% end  %>
+          <%= (total.to_f / @pet.reviews.length).round(1) %>
+          <% (total.to_f / @pet.reviews.length).round(0).times do |star| %>
+            <span class="fa fa-star checked"> </span>
+          <% end %>
+      <%= link_to "Back to my profile", pet_path(@pet), class: "btn btn-flat" %>
+      <%= link_to "Back to all pets", pets_path(@pets), class: "btn btn-flat" %>
         <ol>
-          <% @reviews.each do |review| %>
+          <% @pet.reviews.each do |review| %>
 
             <li class ="review-card">
               <%= review.comment.downcase %> <br>
@@ -26,10 +31,8 @@
               <% end %>
 
             </li>
-            <% end %>
-            </ol>
-
-
-    </div>
+          <% end %>
+        </ol>
   </div>
+</div>
 </div>

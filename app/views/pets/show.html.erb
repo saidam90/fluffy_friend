@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="show-container">
     <div class="banner-pet" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= cl_image_path @pet.photos[0].key %>')">
@@ -28,21 +27,26 @@
         <%# counter for the review total %>
         <% total = 0 %>
         <%# sum the review total %>
-        <% @reviews.each do |review| %>
+        <% if @pet.reviews.length > 0  %>
+        <% @pet.reviews.each do |review| %>
           <% total += review.rating.to_f %>
-         <% end %>
-        <%# give the average to 1 decimal place %>
-       <span><%= (total.to_f / @reviews.length).round(1) %></span>
-        <%# give the number of stars for rounded average rating %>
-        <% (total.to_f / @reviews.length).round(0).times do |star| %>
-          <span class="fa fa-star checked"> </span>
         <% end %>
-        <h2 class="leader">
-          <%= link_to "My reviews ⭐", pet_reviews_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
-          <%= link_to "Leave a review 🖊️", new_pet_review_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
+
+        <%# give the average to 1 decimal place %>
+      <span><%= (total.to_f / @pet.reviews.length).round(1) %></span>
+        <%# give the number of stars for rounded average rating %>
+        <% (total.to_f / @pet.reviews.length).round(0).times do |star| %>
+        <span class="fa fa-star checked"> </span>
+        <% end %>
+        <div class="leader">
+          <%= link_to "My reviews", pet_reviews_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
+          <%= link_to "Leave a review", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
+          </div>
           <h2 class="leader">People have said about me...</h2>
-          <p><%= (@reviews[rand(@reviews.length)].comment) %> </p>
-        </>
+          <p>" <%= (@pet.reviews[rand(@pet.reviews.length)].comment) %>! "</p>
+        <%else  %>
+        <%= link_to "Leave my first review 🖊️", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
+        <% end %>
       </div>
 
       <div class="card-about-info">
@@ -52,7 +56,7 @@
         <h2>
           I am a cheeky little whippersnapper that likes long walks on the beach and a lot of attention! I am the fluffy child of <span> <%= @pet.user.first_name %>. </span>
           <br>
-          <%= link_to "Message 💬", "", class: "btn btn-primary text-white rounded-lg" %>
+          <%= link_to "Message", "", class: "btn btn-primary text-white rounded-lg" %>
         </h2>
       </div>
     </div>

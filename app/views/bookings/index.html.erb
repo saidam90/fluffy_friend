@@ -1,4 +1,4 @@
 <h1 class="text-center mt-4">My Pet Bookings</h1>
 <% @bookings.each do |booking| %>
-  <li class="text-center text-decoration-none"><%= link_to booking, booking_path(booking) %></li>
+  <li class="text-center text-decoration-none"><%= link_to booking.pet.name, bookings_path(booking) %></li>
 <% end %>
