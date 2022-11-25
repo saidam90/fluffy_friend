@@ -80,7 +80,7 @@ pet_3 = Pet.create!(name: "Birdie", category: "bird", breed: "woodpecker", age: 
 pet_3.photos.attach(io: file_3, filename:"nes.jpg", content_type: "image/jpg")
 
 file_4 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669308152/development/0kh97wawhgq9arxdoftdkhnfpnq2.jpg")
-pet_4 = Pet.create!(name: "Neko", category: "cat", breed: "birman", age: 8, location: Faker::Address.street_address, user: dylan)
+pet_4 = Pet.create!(name: "Sabri", category: "cat", breed: "birman", age: 8, location: Faker::Address.street_address, user: dylan)
 pet_4.photos.attach(io: file_4, filename:"nes.jpg", content_type: "image/jpg")
 
 file_5 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669308155/development/9r63mvg9gu4lxwglxajiao5heo3l.jpg")
