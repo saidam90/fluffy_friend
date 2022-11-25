@@ -1,6 +1,9 @@
 class Pet < ApplicationRecord
   has_many :bookings
   belongs_to :user
+  has_many :reviews
+  has_many_attached :photos
+
 
   # validates :category, presence: true
   # validates :breed, presence: true

@@ -1,12 +1,24 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
+    @reviews = Review.all
+  end
+
+  def show
+    @pet = Pet.find(params[:id])
+    @reviews = Review.where(pet_id: @pet.reviews)
+  end
+
+  def new
+    @pet = Pet.new
   end
 
   def create
     @pet = Pet.new(pet_params)
+    @pet.user = current_user
     if @pet.save
-      redirect_to pets_path
+      redirect_to pets_path, notice: " #{@pet.name} added successfully."
+
     else
       render :new, status: :unprocessable_entity
     end
@@ -23,7 +35,7 @@ class PetsController < ApplicationController
 
   private
 
-  def list_params
-    params.require(:pet).permit(:category, :breed, :name, :location)
+  def pet_params
+    params.require(:pet).permit(:category, :breed, :name, :age, :location, photos: [])
   end
-end
+  end
