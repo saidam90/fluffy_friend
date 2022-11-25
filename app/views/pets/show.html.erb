@@ -1,6 +1,6 @@
 <div class="container">
   <div class="show-container">
-    <div class="banner-pet" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
+    <div class="banner-pet" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= cl_image_path @pet.photos[0].key %>')">
       <div class="container">
         <h1>I'm <%= @pet.name %></h1>
         <%= link_to "Play with me!", new_pet_booking_path(@pet), class: "btn btn-flat" %>
