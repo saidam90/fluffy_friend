@@ -7,7 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'faker'
+Booking.destroy_all
 Pet.destroy_all
+User.destroy_all
 
 3.times do
   user = User.create!(
@@ -23,7 +25,7 @@ Pet.destroy_all
       category: ["dog", "cat", "hamster", "bird", "rabbit", "horse", "fish", "guinea pig"].sample,
       breed: ["poodle", "bulldog", "scottish fold", "beagle", "golden retriever", "labrador"].sample,
       age: Faker::Number.number(digits: 2),
-      location: Faker::Address.street_address
+      location: ["41 New Street", "418 Green Lane", "21 Albert Road", "49 Queen Street", "81 Green Lane", "73 The Grove", "23 Park Avenue", "38 North Road"].sample
     )
     pet.user = user
     pet.save!

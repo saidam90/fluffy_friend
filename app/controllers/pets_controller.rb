@@ -14,6 +14,11 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @marker = [{
+      lat: @pet.latitude,
+      lng: @pet.longitude,
+      info_window: render_to_string(partial: "info_window", locals: {pet: @pet})
+    }]
   end
 
   private

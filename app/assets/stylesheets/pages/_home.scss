@@ -1,21 +1,28 @@
 // Specific CSS for your home-page
 
-.banner-home {
- h1 {
-  font-size: 70px !important;
-  color: black !important;
+.banner {
+  h1 {
+  font-size: 80px;
+  color: rgb(9, 1, 1);
+  margin-top: 0;
+  margin-bottom: 10px;
 }
-height: 210px !important;
+  h2{
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
-
-.btn-yellow{
-  background-color: rgb(199, 165, 31);
-  color: white;
-  text-decoration: none;
-  padding: 15px 40px;
-  border-radius: 20px;
-  font-weight: bolder;
-  margin: 20px;
+  .btn-yellow{
+    background-color: rgb(199, 165, 31);
+    color: white;
+    text-decoration: none;
+    margin-top: 60px;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+height: 210px;
+background-color: white;
 }
 
 .btn-yellow:hover{
