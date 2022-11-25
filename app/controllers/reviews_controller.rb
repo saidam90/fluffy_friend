@@ -28,9 +28,9 @@ before_action :set_pet, only: %i[new create]
     params.require(:review).permit(:rating, :comment)
   end
 
-  # def show
-  #   @review = Review.find
-  # end
+  def show
+    @review = Review.find
+  end
 
 
 end
