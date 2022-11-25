@@ -33,9 +33,12 @@ class PetsController < ApplicationController
     }]
   end
 
-  private
+  def method_without_layout
+    render footer: false
+  end
+private
 
   def pet_params
     params.require(:pet).permit(:category, :breed, :name, :age, :location, photos: [])
   end
-  end
+end
