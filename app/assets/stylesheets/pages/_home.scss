@@ -29,3 +29,32 @@ background-color: white;
   background-color: rgb(122, 101, 17);
   color: white;
 }
+
+.card {
+  align-items: center;
+  justify-content: center;
+  border:none;
+  img {
+    width:300px;
+  }
+}
+.card-text{
+  text-align: center;
+  font-size: larger;
+  font-family: Montserrat;
+}
+
+.card-img-top{
+  width: fit-content;
+  justify-content: center;
+}
+
+.text{
+  h1{
+    font-family: Ms Madi;
+    font-size: 60px;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+  }
+}
