@@ -23,15 +23,31 @@
         <h2 >
           Come pick me up from <%= @pet.location %> !
         </h2>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
+
+        <%# counter for the review total %>
+        <% total = 0 %>
+        <%# sum the review total %>
+        <% if @pet.reviews.length > 0  %>
+        <% @pet.reviews.each do |review| %>
+          <% total += review.rating.to_f %>
+        <% end %>
+
+        <%# give the average to 1 decimal place %>
+      <span><%= (total.to_f / @pet.reviews.length).round(1) %></span>
+        <%# give the number of stars for rounded average rating %>
+        <% (total.to_f / @pet.reviews.length).round(0).times do |star| %>
+        <span class="fa fa-star checked"> </span>
+        <% end %>
         <h2 class="leader">
-          <%= link_to "My reviews ⭐", "", class: "btn btn-primary text-white rounded-lg" %>
-        </h2>
+          <%= link_to "My reviews ⭐", pet_reviews_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
+          <%= link_to "Leave a review 🖊️", new_pet_review_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
+          <h2 class="leader">People have said about me...</h2>
+          <p><%= (@pet.reviews[rand(@pet.reviews.length)].comment) %> </p>
+        <%else  %>
+        <%= link_to "Leave my first review 🖊️", new_pet_review_path(@pet), class: "fs-5 fw-bold btn btn-primary rounded-pill" %>
+        <% end %>
       </div>
+
       <div class="card-about-info">
         <h1 class="leader">
           About me
