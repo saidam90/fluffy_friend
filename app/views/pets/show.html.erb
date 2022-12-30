@@ -23,7 +23,7 @@
         <h2 >
           Come pick me up from <%= @pet.location %> !
         </h2>
-
+      <p>
         <%# counter for the review total %>
         <% total = 0 %>
         <%# sum the review total %>
@@ -31,7 +31,10 @@
         <% @pet.reviews.each do |review| %>
           <% total += review.rating.to_f %>
         <% end %>
-
+      </p>
+        <h2>
+          I am a cheeky little whippersnapper that likes long walks on the beach and a lot of attention! I am the fluffy child of <span> <%= @pet.user.first_name %>. </span>
+        </h2>
         <%# give the average to 1 decimal place %>
       <span><%= (total.to_f / @pet.reviews.length).round(1) %></span>
         <%# give the number of stars for rounded average rating %>
@@ -48,25 +51,14 @@
         <% end %>
       </div>
 
-      <div class="card-about-info">
-        <h1 class="leader">
-          About me
-        </h1>
-        <h2>
-          I am a cheeky little whippersnapper that likes long walks on the beach and a lot of attention! I am the fluffy child of <span> <%= @pet.user.first_name %>. </span>
-          <br>
-          <%= link_to "Message", "", class: "btn btn-primary text-white rounded-lg" %>
-        </h2>
       </div>
     </div>
-  </div>
 
+    <div class="map-review-container">
 
-    <div class="map-container">
-
-      <div class="address text-center">
+      <div class="address">
         <h2> <%= @pet.name %> 's address: </h2>
-        <div style="width: 400px; height: 500px;"
+        <div style="width: 800px; height: 500px;"
           data-controller="map"
           data-map-markers-value="<%= @marker.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -74,28 +66,19 @@
       </div>
 
       <div class="content-box text-center">
-      <h2>Reviews</h2>
-      <%# <% total = 0 %>
-        <%# <% @pet.reviews.each do |review| %>
-          <%# <% total += review.rating.to_f %>
-        <%# <% end  %>
-            <%# <%= (total.to_f / @pet.reviews.length).round(1) %>
-            <%# <% (total.to_f / @pet.reviews.length).round(0).times do |star| %>
-              <%# <span class="fa fa-star checked"> </span>
+        <h2>Reviews</h2>
+        <% @pet.reviews.each do |review| %>
+          <p class ="review-card">
+            "<%= review.comment.capitalize %>"
+            <br>
+            <% review.rating.times do |star| %>
+              <span class="fa fa-star checked"> </span>
             <% end %>
-            <% @pet.reviews.each do |review| %>
-              <p class ="review-card">
-                "<%= review.comment.capitalize %>"
-                <br>
-                <% review.rating.times do |star| %>
-                  <span class="fa fa-star checked"> </span>
-                <% end %>
-               </p>
-            <% end %>
+          </p>
+        <% end %>
       </div>
 
-  </div>
-
-  <%= link_to "Back to all pets", pets_path(@pets), class: "btn btn-flat" %>
-  <%= link_to "Back to my profile", pet_path(@pet), class: "btn btn-flat" %>
+    <%# <%= link_to "Back to all pets", pets_path(@pets), class: "btn btn-flat text-center" %>
+    <%# <%= link_to "Back to my profile", pet_path(@pet), class: "btn btn-flat text-center" %>
+    </div>
 </div>
