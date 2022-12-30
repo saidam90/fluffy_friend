@@ -21,10 +21,10 @@
               <%= link_to "Home", new_user_session_path, class: "nav-link font-weight: 900" %>
             </li>
              <li class="nav-item">
-              <%= link_to "Discover pets", new_user_session_path, class: "nav-link font-weight: 900" %>
+              <%= link_to "Discover pets", pets_path, class: "nav-link font-weight: 900" %>
             </li>
             <li class="nav-item">
-              <%= link_to "Add a pet", new_user_session_path, class: "nav-link font-weight: 900" %>
+              <%= link_to "Add a pet", new_pet_path, class: "nav-link font-weight: 900" %>
             </li>
             <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

@@ -1,9 +1,9 @@
-<div class="container">
+ <div class="container">
   <div class="show-container">
     <div class="banner-pet" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= cl_image_path @pet.photos[0].key %>')">
-      <div class="container">
+      <div class="text-center">
         <h1>I'm <%= @pet.name %></h1>
-        <%= link_to "Play with me!", new_pet_booking_path(@pet), class: "btn btn-flat" %>
+        <%= link_to "Play with me!", new_pet_booking_path(@pet), class: "btn btn-flat-play" %>
       </div>
     </div>
     <div class="cards">
@@ -39,13 +39,12 @@
         <span class="fa fa-star checked"> </span>
         <% end %>
         <div class="leader">
-          <%= link_to "My reviews", pet_reviews_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
           <%= link_to "Leave a review", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
           </div>
-          <h2 class="leader">People have said about me...</h2>
-          <p>" <%= (@pet.reviews[rand(@pet.reviews.length)].comment) %>! "</p>
+          <%# <h2 class="leader">People have said about me...</h2>
+          <p>" <%= (@pet.reviews[rand(@pet.reviews.length)].comment) <>%>
         <%else  %>
-        <%= link_to "Leave my first review 🖊️", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
+        <%= link_to "Leave a review", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
         <% end %>
       </div>
 
@@ -61,17 +60,42 @@
       </div>
     </div>
   </div>
-</div>
-<br>
 
 
-<div class="container">
-  <h2>
-  <%= @pet.name %> 's address:
-  </h2>
-  <div style="width: 100%; height: 500px;"
-    data-controller="map"
-    data-map-markers-value="<%= @marker.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="map-container">
+
+      <div class="address text-center">
+        <h2> <%= @pet.name %> 's address: </h2>
+        <div style="width: 400px; height: 500px;"
+          data-controller="map"
+          data-map-markers-value="<%= @marker.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+
+      <div class="content-box text-center">
+      <h2>Reviews</h2>
+      <%# <% total = 0 %>
+        <%# <% @pet.reviews.each do |review| %>
+          <%# <% total += review.rating.to_f %>
+        <%# <% end  %>
+            <%# <%= (total.to_f / @pet.reviews.length).round(1) %>
+            <%# <% (total.to_f / @pet.reviews.length).round(0).times do |star| %>
+              <%# <span class="fa fa-star checked"> </span>
+            <% end %>
+            <% @pet.reviews.each do |review| %>
+              <p class ="review-card">
+                "<%= review.comment.capitalize %>"
+                <br>
+                <% review.rating.times do |star| %>
+                  <span class="fa fa-star checked"> </span>
+                <% end %>
+               </p>
+            <% end %>
+      </div>
+
   </div>
+
+  <%= link_to "Back to all pets", pets_path(@pets), class: "btn btn-flat" %>
+  <%= link_to "Back to my profile", pet_path(@pet), class: "btn btn-flat" %>
 </div>
