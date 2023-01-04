@@ -9,7 +9,7 @@
     <div class="cards">
       <div class="card-pet-info">
         <h2 class="leader" >
-        Name: <%= @pet.name %>
+          Name: <%= @pet.name %>
         </h2>
         <h2 >
           Age: <%= @pet.age %> years old
@@ -46,7 +46,7 @@
           </div>
           <%# <h2 class="leader">People have said about me...</h2>
           <p>" <%= (@pet.reviews[rand(@pet.reviews.length)].comment) <>%>
-        <%else  %>
+        <% else  %>
         <%= link_to "Leave a review", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
         <% end %>
       </div>
@@ -77,8 +77,5 @@
           </p>
         <% end %>
       </div>
-
-    <%# <%= link_to "Back to all pets", pets_path(@pets), class: "btn btn-flat text-center" %>
-    <%# <%= link_to "Back to my profile", pet_path(@pet), class: "btn btn-flat text-center" %>
     </div>
 </div>

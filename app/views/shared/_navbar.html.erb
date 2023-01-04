@@ -12,6 +12,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <li class="nav-item">
@@ -23,7 +24,7 @@
               %>
               <%= submit_tag "Search", class: "btn btn-primary" %>
             <% end %>
-              <%# <%= link_to "Search", new_user_session_path, class: "nav-link font-weight: 900" %>
+
             </li>
             <li class="nav-item">
               <%= link_to "Home", new_user_session_path, class: "nav-link font-weight: 900" %>
@@ -36,13 +37,12 @@
             </li>
             <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-
               <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
-
               <%= link_to "Add a pet", new_pet_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
+
         <% else %>
           <li class="nav-item">
             <%= link_to "Home", new_user_session_path, class: "nav-link" %>

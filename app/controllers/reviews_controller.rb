@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
 before_action :set_pet, only: %i[new create]
+
   def create
     @review = Review.new(review_params)
     @review.pet = @pet
@@ -14,8 +15,6 @@ before_action :set_pet, only: %i[new create]
   def index
     @pet = Pet.find(params[:pet_id])
     @reviews = Review.where(pet_id: @pet.reviews)
-
-
   end
 
   private
@@ -31,6 +30,4 @@ before_action :set_pet, only: %i[new create]
   def show
     @review = Review.find
   end
-
-
 end

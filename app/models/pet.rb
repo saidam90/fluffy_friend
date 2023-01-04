@@ -4,7 +4,6 @@ class Pet < ApplicationRecord
   has_many :reviews
   has_many_attached :photos
 
-
   # validates :category, presence: true
   # validates :breed, presence: true
   # validates :name, presence: true
@@ -14,5 +13,4 @@ class Pet < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
-
 end

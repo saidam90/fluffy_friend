@@ -7,34 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'open-uri'
 require 'faker'
-require "open-uri"
-require "yaml"
 
 Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
-
-
-# 3.times do
-#   user = User.create!(
-#     first_name: Faker::Name.name,
-#     last_name: Faker::Name.name,
-#     email: Faker::Internet.email,
-#     password: "123456"
-#     # owner: [true, false].sample
-#   )
-#   10.times do
-#     pet = Pet.new(
-#       name: ["Maya", "Gus", "Mr Humphries", "Pochita", "Bubble", "Rex"].sample,
-#       category: ["dog", "cat", "hamster", "bird", "rabbit", "horse", "fish", "guinea pig"].sample,
-#       breed: ["poodle", "bulldog", "scottish fold", "beagle", "golden retriever", "labrador"].sample,
-#       age: Faker::Number.number(digits: 2),
-#       location: Faker::Address.street_address
-#     )
-#     pet.user = user
-#     pet.save!
-#   end
-# end
 
 tommy = User.create!(
   first_name: Faker::Name.name,
@@ -49,7 +25,6 @@ max = User.create!(
   last_name: Faker::Name.name,
   email: "max@gmail.com",
   password: "123456"
-  # owner: [true, false].sample
 )
 
 saida = User.create!(
@@ -57,7 +32,6 @@ saida = User.create!(
   last_name: Faker::Name.name,
   email: "saida@gmail.com",
   password: "123456"
-  # owner: [true, false].sample
 )
 
 dylan = User.create!(
@@ -65,7 +39,6 @@ dylan = User.create!(
   last_name: Faker::Name.name,
   email: "dylan@gmail.com",
   password: "123456"
-  # owner: [true, false].sample
 )
 
 

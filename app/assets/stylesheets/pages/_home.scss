@@ -6,17 +6,22 @@ body{
 }
 
 .banner{
+  height: 210px;
+  background-color: white;
+
   h1{
   font-size: 80px;
   color: rgb(9, 1, 1);
   margin-top: 0;
   margin-bottom: 20px;
-}
+  }
+
   h2{
     font-family: 'Poppins';
     font-size: 18px;
     margin-bottom: 45px;
-}
+  }
+
   .btn-yellow{
     background-color: #c7a51f;
     color: white;
@@ -25,9 +30,7 @@ body{
     padding: 15px 40px;
     border-radius: 10px;
     font-weight: bolder;
-}
-height: 210px;
-background-color: white;
+  }
 }
 
 .btn-yellow:hover{
@@ -39,10 +42,12 @@ background-color: white;
   align-items: center;
   justify-content: center;
   border:none;
+
   img{
     width: 200px;
     margin-top: 0;
   }
+
   .card-text{
     font-size: 16px;
     margin-bottom: 100px;
@@ -73,20 +78,22 @@ background-color: white;
 }
 
 .categories{
+  margin-left: 387px;
+  width: 55%;
+
   .btn{
     img{
       width: 100px;
       margin-top: 30px;
       color: #c7a51f;
     }
+
     img:hover{
       width: 100px;
       margin-top: 30px;
       fill: #c7a51f;
     }
   }
-  margin-left: 387px;
-  width: 55%;
 }
 
 a{
