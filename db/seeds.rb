@@ -7,6 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'open-uri'
 require 'faker'
+require "open-uri"
+require "yaml"
 
 Booking.destroy_all
 Pet.destroy_all

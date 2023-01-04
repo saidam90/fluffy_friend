@@ -22,3 +22,20 @@
   margin-top: 7px;
   font-weight: 900;
 }
+
+.d-flex {
+  display: flex !important;
+  margin-top: 8px;
+  margin-right: 20px;
+}
+
+.btn-primary{
+  color: white;
+  background-color: #c7a51f;
+  margin-left: 10px;
+}
+
+.btn-primary:hover{
+  background-color: #816c14;
+  color: white;
+}
