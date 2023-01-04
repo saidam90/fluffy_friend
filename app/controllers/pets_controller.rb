@@ -10,7 +10,7 @@ class PetsController < ApplicationController
     @marker = [{
       lat: @pet.latitude,
       lng: @pet.longitude,
-      info_window: render_to_string(partial: "info_window", locals: {pet: @pet})
+      info_window: render_to_string(partial: "info_window", locals: { pet: @pet })
     }]
   end
 
@@ -26,17 +26,16 @@ class PetsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+
   def show
     @pet = Pet.find(params[:id])
     @marker = [{
       lat: @pet.latitude,
       lng: @pet.longitude,
-      info_window: render_to_string(partial: "info_window", locals: {pet: @pet})
+      info_window: render_to_string(partial: "info_window", locals: { pet: @pet })
     }]
   end
 
-  
   private
 
   def pet_params

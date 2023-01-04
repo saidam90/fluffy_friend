@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-lewagon sticky-top">
   <div class="container-fluid ">
     <%= link_to root_path, class: "navbar-brand" do %>
 
@@ -15,9 +15,18 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <li class="nav-item">
+              <%= link_to "Search", new_user_session_path, class: "nav-link font-weight: 900" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Home", new_user_session_path, class: "nav-link font-weight: 900" %>
             </li>
-            <%= image_tag "https://cdn-icons-png.flaticon.com/512/7784/7784793.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+             <li class="nav-item">
+              <%= link_to "Discover pets", new_user_session_path, class: "nav-link font-weight: 900" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Add a pet", new_user_session_path, class: "nav-link font-weight: 900" %>
+            </li>
+            <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
               <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>

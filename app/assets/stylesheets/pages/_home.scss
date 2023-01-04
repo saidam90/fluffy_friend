@@ -3,16 +3,16 @@ body{
   background-color: white;
 }
 
-.banner {
-  h1 {
+.banner{
+  h1{
   font-size: 80px;
   color: rgb(9, 1, 1);
   margin-top: 0;
   margin-bottom: 20px;
 }
   h2{
-    font-family: Montserrat;
-    font-size: 20px;
+    font-family: 'Poppins';
+    font-size: 18px;
     margin-bottom: 45px;
 }
   .btn-yellow{
@@ -33,18 +33,24 @@ background-color: white;
   color: white;
 }
 
-.card {
+.card{
   align-items: center;
   justify-content: center;
   border:none;
-  img {
-    width:300px;
+  img{
+    width: 200px;
+    margin-top: 0;
+  }
+  .card-text{
+    font-size: 16px;
+    margin-bottom: 100px;
   }
 }
+
 .card-text{
   text-align: center;
   font-size: larger;
-  font-family: Montserrat;
+  font-family: 'Poppins';
 }
 
 .card-img-top{
@@ -53,11 +59,34 @@ background-color: white;
 }
 
 .text{
-  h1{
-    font-family: Ms Madi;
-    font-size: 60px;
+  h2{
+    font-family: 'Poppins';
+    font-size: 25px;
+    margin: 50px 0 17px 0;
+    font-weight: 900;
+    color: black;
     text-align: center;
-    justify-content: center;
     background-color: white;
   }
+}
+
+.categories{
+  .btn{
+    img{
+      width: 100px;
+      margin-top: 30px;
+      color: #c7a51f;
+    }
+    img:hover{
+      width: 100px;
+      margin-top: 30px;
+      fill: #c7a51f;
+    }
+  }
+  margin-left: 387px;
+  width: 55%;
+}
+
+a{
+  text-decoration: none;
 }
