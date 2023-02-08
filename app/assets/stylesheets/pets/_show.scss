@@ -1,0 +1,193 @@
+.banner-pet {
+  background-size: cover;
+  background-position: 50% 65%;
+  padding: 150px 0;
+  width: 130%;
+  border-radius: 30px;
+  height: 500px;
+  position: relative;
+}
+
+.banner-pet h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Poppins';
+  position: absolute;
+  top: 17px;
+  width: 100%;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins';
+}
+
+.btn-flat-play {
+  color: white;
+  font-size: 15px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: #c7a51f;
+  transition: background 0.3s ease;
+  bottom: 20px;
+  position: absolute;
+  left: 340px;
+}
+
+.btn-flat-play:hover {
+  background: #4a3b09;
+  color: white;
+}
+
+.btn-flat {
+  color: white;
+  font-size: 15px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: #c7a51f;
+  transition: background 0.3s ease;
+  position: absolute;
+}
+
+.btn-flat:hover {
+  background: #4a3b09;
+  color: white;
+}
+
+.show-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 30px;
+
+  h2 {
+    font-size: 15px;
+    font-family: 'Poppins';
+  }
+}
+
+.map-review-container {
+  margin-top: 40px;
+  display: flex;
+
+  .address {
+    margin-left: 40px;
+  }
+
+  h2 {
+    font-family: "Poppins";
+    font-size: 20px;
+  }
+
+  .content-box {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-family: "Poppins";
+      font-size: 20px;
+    }
+  }
+
+  .review-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+  }
+}
+
+
+.card-pet-info,
+.card-owner-info,
+.card-about-info {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Poppins';
+
+  .btn-primary {
+    font-size: 15px;
+    background-color: #c7a51f;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+  }
+}
+
+.cards {
+  display: flex;
+  font-family: 'Poppins';
+  flex-direction: column;
+  width: 700px;
+  margin-left: 30px;
+  margin-right: 20px;
+  padding: 25px 10px;
+}
+
+.cards h1 {
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.cards {
+  h2 {
+    font-size: 15px;
+    font-family: 'Poppins';
+    margin-bottom: 5px;
+    margin: 5px;
+  }
+}
+
+.checked {
+  color: orange;
+}
+
+.leader {
+  font-size: 15px;
+  background-image: linear-gradient(to left, #404946, #1b191e);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin: 7px;
+  padding: 0px;
+
+  h1 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #c89b1e;
+  }
+
+  h2 {
+    font-size: 15px;
+    color: #4a3b09;
+  }
+}
+
+
+.card-about-info {
+  .btn-primary {
+    font-size: 15px;
+    background-color: #c7a51f;
+    padding: 10px 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: white;
+  }
+}

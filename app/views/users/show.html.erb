@@ -1,0 +1,7 @@
+<h1>My page</h1>
+
+<h1 class="text-center mt-4">My Pet Bookings</h1>
+<% @user.bookings.each do |booking| %>
+  <li class="text-center text-decoration-none"><%# link_to booking, booking_path(booking) %></li>
+  <%= booking.pet.name %>
+<% end %>

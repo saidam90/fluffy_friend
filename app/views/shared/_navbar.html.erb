@@ -1,0 +1,65 @@
+<div class="navbar navbar-expand-sm navbar-lewagon sticky-top">
+  <div class="container-fluid ">
+    <%= link_to root_path, class: "navbar-brand" do %>
+
+      <%= image_tag "logo.png", style: "height:auto;width:45px;" %>
+
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <li class="nav-item">
+              <%= form_with url: pets_path, method: :get, class: "d-flex" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Find a pet"
+              %>
+              <%= submit_tag "Search", class: "btn btn-primary" %>
+            <% end %>
+
+            </li>
+            <li class="nav-item">
+              <%= link_to "Home", new_user_session_path, class: "nav-link font-weight: 900" %>
+            </li>
+             <li class="nav-item">
+              <%= link_to "Discover pets", pets_path, class: "nav-link font-weight: 900" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Add a pet", new_pet_path, class: "nav-link font-weight: 900" %>
+            </li>
+            <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
+              <%= link_to "Add a pet", new_pet_path, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Home", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+
+            <%= link_to "My bookings", bookings_path(@booking), class: "nav-link" %>
+
+          </li>
+          <li class="nav-item">
+            <%= link_to "Publish my pet", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign-in", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

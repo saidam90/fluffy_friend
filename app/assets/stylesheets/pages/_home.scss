@@ -1,0 +1,113 @@
+// Specific CSS for your home-page
+body {
+  background-color: white;
+  margin-bottom: 150px;
+  clear: both;
+}
+
+.banner {
+  height: 210px;
+  background-color: white;
+
+  h1 {
+    font-size: 80px;
+    color: rgb(9, 1, 1);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: 'Poppins';
+    font-size: 18px;
+    margin-bottom: 45px;
+  }
+
+  .btn-yellow {
+    background-color: #c7a51f;
+    color: white;
+    text-decoration: none;
+    margin-top: 60px;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+  }
+}
+
+.btn-yellow:hover {
+  background-color: rgb(122, 101, 17);
+  color: white;
+}
+
+.card {
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  img {
+    width: 200px;
+    margin-top: 0;
+  }
+
+  .card-text {
+    font-size: 16px;
+    margin-bottom: 100px;
+  }
+}
+
+.card-text {
+  text-align: center;
+  font-size: larger;
+  font-family: 'Poppins';
+}
+
+.card-img-top {
+  width: fit-content;
+  justify-content: center;
+}
+
+.text {
+  h2 {
+    font-family: 'Poppins';
+    font-size: 25px;
+    margin: 50px 0 17px 0;
+    font-weight: 900;
+    color: black;
+    text-align: center;
+    background-color: white;
+  }
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+
+  .btn {
+    img {
+      width: 100px;
+      margin-top: 30px;
+      color: #c7a51f;
+    }
+
+    img:hover {
+      width: 100px;
+      margin-top: 30px;
+      fill: #c7a51f;
+    }
+  }
+}
+
+// @media only screen and (max-width: 767px) {
+//   .categories {
+//     flex-wrap: wrap;
+//     justify-content: center;
+//   }
+
+//   .categories button {
+//     width: 40%;
+//     margin: 10px 5%;
+//   }
+// }
+
+a {
+  text-decoration: none;
+}

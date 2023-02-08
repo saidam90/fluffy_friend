@@ -1,0 +1,23 @@
+<div class="container-fluid container py-3 mt-4">
+
+  <h2 class="title">Pet List</h2>
+  <p>A totally new experience for you and our little friends.
+  Or find a pet near you.</p>
+  <div class="petcard">
+    <% @pets.each do |pet| %>
+      <div class="mt-4">
+          <div class="card mb-3">
+            <%= link_to pet_path(pet), class: "card-img-top" do %>
+            <%= cl_image_tag pet.photos[0].key %>
+            <% end %>
+          <div class="card-body">
+            <h5><strong>Name:</strong> "<%= pet.name %>"</h5>
+            <h5><strong>Category:</strong> <%= pet.category.capitalize %></h5>
+            <h5></strong>Age:</strong> <%= pet.age %> y.o.</h5>
+            <h5></strong>Description:</strong> <%= pet.name %>  is a really clever, adventurous and happy cat! He frequently travels with me and does amazing in new places...</h5>
+          </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

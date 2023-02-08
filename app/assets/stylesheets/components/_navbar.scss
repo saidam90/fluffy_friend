@@ -1,0 +1,41 @@
+.navbar-lewagon{
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse{
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img{
+  width: 40px;
+}
+
+#navbarDropdown{
+  margin-right: 10px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-link{
+  margin-right: 10px;
+  margin-top: 7px;
+  font-weight: 900;
+}
+
+.d-flex {
+  display: flex !important;
+  margin-top: 8px;
+  margin-right: 20px;
+}
+
+.btn-primary{
+  color: white;
+  background-color: #c7a51f;
+  margin-left: 10px;
+}
+
+.btn-primary:hover{
+  background-color: #816c14;
+  color: white;
+}
