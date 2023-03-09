@@ -196,7 +196,19 @@
   .show-container {
     display: flex;
     flex-wrap: wrap;
+    justify-self: center;
   }
+
+  .map-review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+  }
+
+  .address {
+    width: 300px;
+  }
+
 }
 
 @media (max-width: 780px) {
