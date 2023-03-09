@@ -26,19 +26,18 @@ p {
   text-align: center;
 
   h5 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-size: 16px;
   }
 }
 
 .container {
   .title {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     text-align: center;
     font-size: 25px;
   }
 }
-
 
 .card-img-top:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -91,18 +90,5 @@ p {
 
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
-
-@media (max-width: 400px) {
-  .petcard {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 780px) {
-  .petcard {
-    grid-template-columns: 1fr 1fr;
   }
 }

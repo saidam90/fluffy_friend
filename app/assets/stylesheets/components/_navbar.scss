@@ -1,23 +1,23 @@
-.navbar-lewagon{
+.navbar-lewagon {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse{
+.navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img{
+.navbar-lewagon .navbar-brand img {
   width: 40px;
 }
 
-#navbarDropdown{
+#navbarDropdown {
   margin-right: 10px;
   width: 55px;
   height: 55px;
 }
 
-.nav-link{
+.nav-link {
   margin-right: 10px;
   margin-top: 7px;
   font-weight: 900;
@@ -26,16 +26,19 @@
 .d-flex {
   display: flex !important;
   margin-top: 8px;
-  margin-right: 20px;
 }
 
-.btn-primary{
+.btn-primary {
   color: white;
   background-color: #c7a51f;
   margin-left: 10px;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: #816c14;
   color: white;
+}
+
+.search-bar {
+  margin-right: 25px;
 }

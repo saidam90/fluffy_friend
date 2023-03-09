@@ -11,14 +11,14 @@
   height: 70px;
   padding: 0px 30px;
   color: rgba(0, 0, 0, 0.3);
-  // border-top: 1px solid rgba(0,0,0,0.1);
   border-top: 1px solid #c7a51f;
+  font-size: 12px;
 }
 
 .footer-links {
   display: flex;
   align-items: center;
-  font-size: 1.25em;
+  font-size: 11px;
 }
 
 .footer-links a {
@@ -27,11 +27,19 @@
   text-decoration: none;
   padding: 0px 10px;
   transition: all 0.3s ease-in-out;
+
+  .nav-link {
+    font-size: 9px;
+  }
 }
 
 .footer-links a:hover {
   color: #c7a51f;
   opacity: 1;
+}
+
+.footer-link {
+  font-size: 12px;
 }
 
 .footer .fa-heart {
