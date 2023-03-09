@@ -7,17 +7,18 @@
 
   h2 {
     font-size: 15px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
   }
 }
 
 .banner-pet {
-  background-size: cover;
-  background-position: 50% 65%;
+  background-size: contain;
+  background-position: center center;
   padding: 150px 0;
-  width: 130%;
+  width: 120%;
   border-radius: 30px;
-  height: 500px;
+  max-height: 100%;
+  max-width: 100%;
   position: relative;
 }
 
@@ -27,7 +28,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 25px;
   font-weight: bold;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   position: absolute;
   top: 17px;
   width: 100%;
@@ -36,9 +37,9 @@
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: 0.7;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .btn-flat-play {
@@ -99,25 +100,22 @@
   }
 
   .review-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     width: 200px;
     height: 60px;
     border-radius: 10px;
   }
 }
 
-
 .card-pet-info,
 .card-owner-info,
 .card-about-info {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   width: 95%;
   margin: auto;
   text-align: center;
   border-radius: 20px;
   padding: 5px;
   background-color: rgb(255, 255, 255);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   .btn-primary {
     font-size: 15px;
@@ -131,7 +129,7 @@
 
 .cards {
   display: flex;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   flex-direction: column;
   width: 700px;
   margin-left: 30px;
@@ -141,7 +139,7 @@
 
 .cards h1 {
   font-size: 20px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 100;
   margin-bottom: 5px;
 }
@@ -149,7 +147,7 @@
 .cards {
   h2 {
     font-size: 15px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     margin-bottom: 5px;
     margin: 5px;
   }
@@ -180,7 +178,6 @@
   }
 }
 
-
 .card-about-info {
   .btn-primary {
     font-size: 15px;
@@ -208,7 +205,6 @@
   .address {
     width: 300px;
   }
-
 }
 
 @media (max-width: 780px) {
