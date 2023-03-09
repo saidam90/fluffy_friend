@@ -9,43 +9,37 @@
     <div class="cards">
       <div class="card-pet-info">
         <h2 class="leader" >
-          Name: <%= @pet.name %>
+          <strong>Name:</strong> <%= @pet.name %>
         </h2>
         <h2 >
-          Age: <%= @pet.age %> years old
+          <strong>Age:</strong> <%= @pet.age %> years old
         </h2>
         <h2 >
-          Breed: <%= @pet.breed.capitalize %>
+          <strong>Breed:</strong> <%= @pet.breed.capitalize %>
         </h2>
         <h2>
-          Price: £20.00 per hour
+          <strong>Price:</strong> £20.00 per hour
         </h2>
         <h2 >
-          Come pick me up from <%= @pet.location %>
+          <strong>Address:</strong> Pick me up from <%= @pet.location %>
         </h2>
       <p>
-        <%# counter for the review total %>
         <% total = 0 %>
-        <%# sum the review total %>
         <% if @pet.reviews.length > 0  %>
         <% @pet.reviews.each do |review| %>
           <% total += review.rating.to_f %>
         <% end %>
       </p>
-        <h2>
-          I am a cheeky little whippersnapper that likes long walks on the beach and a lot of attention! I am the fluffy child of <span> <%= @pet.user.first_name %>. </span>
-        </h2>
-        <%# give the average to 1 decimal place %>
+        <p>
+          <strong>Description:</strong> I am a cheeky little whippersnapper that likes long walks on the beach and a lot of attention! I am the fluffy child of <span> <%= @pet.user.first_name %>. </span>
+        </p>
       <span><%= (total.to_f / @pet.reviews.length).round(1) %></span>
-        <%# give the number of stars for rounded average rating %>
         <% (total.to_f / @pet.reviews.length).round(0).times do |star| %>
         <span class="fa fa-star checked"> </span>
         <% end %>
         <div class="leader">
           <%= link_to "Leave a review", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
           </div>
-          <%# <h2 class="leader">People have said about me...</h2>
-          <p>" <%= (@pet.reviews[rand(@pet.reviews.length)].comment) <>%>
         <% else  %>
         <%= link_to "Leave a review", new_pet_review_path(@pet), class: "btn btn-primary text-white rounded-lg" %>
         <% end %>
@@ -66,7 +60,7 @@
       </div>
 
       <div class="content-box text-center">
-        <h2>Reviews</h2>
+        <h2>Reviews:</h2>
         <% @pet.reviews.each do |review| %>
           <p class ="review-card">
             "<%= review.comment.capitalize %>"

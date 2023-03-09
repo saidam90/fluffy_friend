@@ -13,12 +13,14 @@ body {
     color: rgb(9, 1, 1);
     margin-top: 0;
     margin-bottom: 20px;
+    font-family: "Ms Madi";
   }
 
   h2 {
     font-family: "Poppins";
     font-size: 18px;
     margin-bottom: 45px;
+    font-weight: 200;
   }
 
   .btn-yellow {
@@ -28,7 +30,7 @@ body {
     margin-top: 60px;
     padding: 15px 40px;
     border-radius: 10px;
-    font-weight: bolder;
+    font-weight: 200;
   }
 }
 
@@ -48,16 +50,18 @@ body {
   }
 
   .card-text {
-    font-size: 16px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin-bottom: 10px;
   }
 }
 
-.card-text {
-  text-align: center;
-  font-size: larger;
-  font-family: "Poppins";
-}
+// .card-text {
+//   text-align: center;
+//   font-size: larger;
+//   font-family: "Poppins";
+//   font-weight: 200;
+//   font-size: 12px;
+// }
 
 .card-img-top {
   width: fit-content;
@@ -69,7 +73,7 @@ body {
     font-family: "Poppins";
     font-size: 25px;
     margin: 50px 0 17px 0;
-    font-weight: 900;
+    font-weight: 200;
     color: black;
     text-align: center;
     background-color: white;
@@ -81,10 +85,13 @@ body {
   justify-content: space-around;
 
   .btn {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-size: 14px;
+
     img {
       width: 100px;
       margin-top: 30px;
-      color: #c7a51f;
     }
 
     img:hover {
@@ -94,18 +101,6 @@ body {
     }
   }
 }
-
-// @media only screen and (max-width: 767px) {
-//   .categories {
-//     flex-wrap: wrap;
-//     justify-content: center;
-//   }
-
-//   .categories button {
-//     width: 40%;
-//     margin: 10px 5%;
-//   }
-// }
 
 a {
   text-decoration: none;

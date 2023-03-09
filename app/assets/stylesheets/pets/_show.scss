@@ -6,8 +6,9 @@
   margin-left: 30px;
 
   h2 {
-    font-size: 15px;
+    font-size: 14px;
     font-family: "Poppins";
+    font-weight: 200;
   }
 }
 
@@ -27,7 +28,7 @@
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 200;
   font-family: "Poppins";
   position: absolute;
   top: 17px;
@@ -52,6 +53,7 @@
   bottom: 20px;
   position: absolute;
   left: 340px;
+  font-weight: 200;
 }
 
 .btn-flat-play:hover {
@@ -84,7 +86,8 @@
 
   h2 {
     font-family: "Poppins";
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: 200;
   }
 
   .content-box {
@@ -95,7 +98,12 @@
 
     h2 {
       font-family: "Poppins";
-      font-size: 20px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    p {
+      font-weight: 200;
     }
   }
 
@@ -186,30 +194,5 @@
     margin-top: 15px;
     margin-bottom: 5px;
     color: white;
-  }
-}
-
-@media (max-width: 400px) {
-  .show-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-self: center;
-  }
-
-  .map-review-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-self: center;
-  }
-
-  .address {
-    width: 300px;
-  }
-}
-
-@media (max-width: 780px) {
-  .show-container {
-    display: flex;
-    flex-wrap: wrap;
   }
 }

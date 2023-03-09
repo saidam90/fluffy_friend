@@ -7,8 +7,10 @@
 
 p {
   text-align: center;
-  size: 15px;
-  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 200;
+  margin: 3px;
+  padding: 0;
 }
 
 .card-img-top {
@@ -36,6 +38,7 @@ p {
     font-family: "Poppins";
     text-align: center;
     font-size: 25px;
+    font-weight: 300;
   }
 }
 

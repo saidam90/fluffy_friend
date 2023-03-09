@@ -12,26 +12,29 @@
 }
 
 #navbarDropdown {
-  margin-right: 10px;
-  width: 55px;
-  height: 55px;
+  margin: 10px 10px 0 0;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-link {
   margin-right: 10px;
-  margin-top: 7px;
-  font-weight: 900;
+  margin-top: 12px;
+  font-weight: 200;
+  font-size: 13px;
 }
 
 .d-flex {
   display: flex !important;
   margin-top: 8px;
+  align-items: center;
 }
 
 .btn-primary {
   color: white;
   background-color: #c7a51f;
   margin-left: 10px;
+  font-weight: 200;
 }
 
 .btn-primary:hover {
@@ -40,5 +43,11 @@
 }
 
 .search-bar {
-  margin-right: 25px;
+  margin: 5px 25px 5px 5px;
+  font-size: 12px;
+}
+
+.form-control {
+  font-size: 12px;
+  height: 33px;
 }
