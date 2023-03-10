@@ -5,6 +5,46 @@
   margin-right: 20px;
   margin-left: 30px;
 
+  .map-review-container {
+    margin-top: 40px;
+    display: flex;
+
+    .address div {
+      // margin-left: 40px;
+      width: 800px;
+      height: 400px;
+    }
+
+    h2 {
+      font-family: "Poppins";
+      font-size: 14px;
+      font-weight: 200;
+    }
+
+    .content-box {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-family: "Poppins";
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      p {
+        font-weight: 200;
+      }
+    }
+
+    .review-card {
+      width: 200px;
+      height: 60px;
+      border-radius: 10px;
+    }
+  }
+
   h2 {
     font-size: 14px;
     font-family: "Poppins";
@@ -74,44 +114,6 @@
 .btn-flat:hover {
   background: #4a3b09;
   color: white;
-}
-
-.map-review-container {
-  margin-top: 40px;
-  display: flex;
-
-  .address {
-    margin-left: 40px;
-  }
-
-  h2 {
-    font-family: "Poppins";
-    font-size: 14px;
-    font-weight: 200;
-  }
-
-  .content-box {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h2 {
-      font-family: "Poppins";
-      font-size: 15px;
-      font-weight: 400;
-    }
-
-    p {
-      font-weight: 200;
-    }
-  }
-
-  .review-card {
-    width: 200px;
-    height: 60px;
-    border-radius: 10px;
-  }
 }
 
 .card-pet-info,
@@ -194,5 +196,54 @@
     margin-top: 15px;
     margin-bottom: 5px;
     color: white;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .show-container {
+    flex-wrap: wrap;
+
+    .map-review-container {
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .address div {
+      width: 350px;
+      height: 200px; /* adjust height as needed */
+    }
+  }
+  .banner-pet {
+    padding: 100px 0;
+  }
+  .btn-flat-play {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .address {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .show-container {
+    flex-wrap: wrap;
+  }
+  .banner-pet {
+    padding: 120px 0;
+  }
+  .btn-flat-play {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .address {
+    width: 100%;
+  }
+
+  .map-review-container {
+    .address div {
+      width: 40%;
+      height: 400px; /* adjust height as needed */
+    }
   }
 }

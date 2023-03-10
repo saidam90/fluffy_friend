@@ -1,0 +1,25 @@
+.container {
+  .new-pet {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-family: "Ms Madi";
+    font-size: 45px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .add-btn {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+}

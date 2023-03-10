@@ -52,7 +52,7 @@
 
       <div class="address">
         <h2> <%= @pet.name %> 's address: </h2>
-        <div style="width: 800px; height: 500px;"
+        <div
           data-controller="map"
           data-map-markers-value="<%= @marker.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
