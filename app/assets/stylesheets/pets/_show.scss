@@ -1,22 +1,23 @@
 .show-container {
   display: flex;
   margin-top: 30px;
+  gap: 20px;
 
   .pet-name {
     font-size: 24px;
     font-family: "Poppins";
     font-weight: 200;
+    margin-top: 0px;
   }
 }
 
 .banner-pet {
-  background-size: contain;
-  background-position: center center;
+  background-size: cover;
+  background-position: center;
   padding: 150px 0;
-  width: 115%;
+  width: 100%;
+  height: 600px;
   border-radius: 30px;
-  max-height: 100%;
-  max-width: 100%;
   position: relative;
 }
 
@@ -49,7 +50,7 @@
   transition: background 0.3s ease;
   bottom: 20px;
   position: absolute;
-  left: 343px;
+  left: 340px;
   font-weight: 200;
 }
 
@@ -78,7 +79,7 @@
   margin-top: 40px;
 
   .mapboxgl-map {
-    width: 841px;
+    width: 828px;
     height: 400px;
   }
 
@@ -197,6 +198,10 @@
 @media screen and (max-width: 767px) {
   .show-container {
     flex-wrap: wrap;
+
+    .pet-content {
+      padding-top: 5px;
+    }
   }
 
   .map-review-container {
@@ -214,6 +219,16 @@
     }
   }
 
+  .banner-pet {
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    width: 100%;
+    height: 350px;
+    border-radius: 30px;
+    position: relative;
+  }
+
   .btn-flat-play {
     left: 50%;
     transform: translateX(-50%);
@@ -228,20 +243,48 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  //   .show-container {
-  //     flex-wrap: wrap;
-  //   }
+  .show-container {
+    flex-wrap: wrap;
 
-  //   .banner-pet {
-  //     padding: 120px 0;
-  //   }
+    .pet-content {
+      padding-top: 5px;
+    }
+  }
 
-  //   .btn-flat-play {
-  //     left: 50%;
-  //     transform: translateX(-50%);
-  //   }
+  .banner-pet {
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    width: 100%;
+    height: 550px;
+    border-radius: 30px;
+    position: relative;
+  }
 
-  //   .map-review-container {
-  //     flex-wrap: wrap;
-  //   }
+  .btn-flat-play {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mapboxgl-map {
+    width: 700px !important;
+    height: 400px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .map-review-container {
+    flex-wrap: wrap;
+    margin: 0;
+
+    .address {
+      padding: 0;
+      margin: 0;
+    }
+
+    .reviews {
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+  }
 }

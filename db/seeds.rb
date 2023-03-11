@@ -42,18 +42,18 @@ dylan = User.create!(
 )
 
 
-file_1 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669242823/zklvy9vui30hajgrq9gu.jpg")
+file_1 = URI.open("https://res.cloudinary.com/dscmyi9t3/image/upload/v1678553178/gg41emjq8xvkk8b7kfke.webp")
 pet_1 = Pet.new(name: "Mr Humphries", category: "hamster", breed: "syrian hamster", age: 5, location: "86 Castledore Road", user: tommy)
-pet_1.photos.attach(io: file_1, filename:"nes.jpg", content_type: "image/jpg")
+pet_1.photos.attach(io: file_1, filename:"hamster.jpg", content_type: "image/jpg")
 pet_1.save!
 
-file_2 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669244345/omlqztwdajacqieuocpq.jpg")
+file_2 = URI.open("https://res.cloudinary.com/dscmyi9t3/image/upload/v1678553530/oak2p8bz7n4fj0uywh8v.avif")
 pet_2 = Pet.new(name: "Bubble", category: "dog", breed: "pug", age: 4, location: "35 Bullwood Rd", user: max)
-pet_2.photos.attach(io: file_2, filename:"nes.jpg", content_type: "image/jpg")
+pet_2.photos.attach(io: file_2, filename:"dog.jpg", content_type: "image/jpg")
 pet_2.save!
 
-file_3 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669308146/development/2plypozksjfhciktf4he38fvoshl.jpg")
-pet_3 = Pet.new(name: "Birdie", category: "bird", breed: "woodpecker", age: 5, location: "16 Northgate Street", user: saida)
+file_3 = URI.open("https://res.cloudinary.com/dscmyi9t3/image/upload/v1678564417/maju6fl8tiowukljbnoa.jpg")
+pet_3 = Pet.new(name: "Birdie", category: "parrot", breed: "cockatiel", age: 5, location: "16 Northgate Street", user: saida)
 pet_3.photos.attach(io: file_3, filename:"nes.jpg", content_type: "image/jpg")
 pet_3.save!
 
@@ -67,7 +67,7 @@ pet_5 = Pet.new(name: "Makima", category: "rabbit", breed: "havana", age: 6, loc
 pet_5.photos.attach(io: file_5, filename:"nes.jpg", content_type: "image/jpg")
 pet_5.save!
 
-file_6 = URI.open("https://res.cloudinary.com/dulhxkrrm/image/upload/v1669307994/qch64wbkxcrpqz4oq72y.jpg")
-pet_6 = Pet.new(name: "Dumbo", category: "elephant", breed: "bush", age: 10, location: "88 Marcham Road", user: max)
+file_6 = URI.open("https://res.cloudinary.com/dscmyi9t3/image/upload/v1678564112/o6zfsaucunkzlotlzn5w.webp")
+pet_6 = Pet.new(name: "Gloria", category: "turtle", breed: "bush", age: 10, location: "88 Marcham Road", user: max)
 pet_6.photos.attach(io: file_6, filename:"nes.jpg", content_type: "image/jpg")
 pet_6.save!
