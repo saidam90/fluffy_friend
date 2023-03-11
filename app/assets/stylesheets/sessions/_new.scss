@@ -1,0 +1,41 @@
+.container {
+  .login {
+    font-family: "Ms Madi";
+    text-align: center;
+    font-size: 45px;
+    margin-top: 40px;
+  }
+
+  .form-inputs {
+    justify-content: center;
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+
+    .btn-primary {
+      justify-content: center;
+      margin: 0 auto 15px auto;
+    }
+  }
+
+  .links {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  #new_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
