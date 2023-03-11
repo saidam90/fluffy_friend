@@ -2,27 +2,27 @@
   <div class="show-container">
     <div class="banner-pet" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= cl_image_path @pet.photos[0].key %>')">
       <div class="text-center">
-        <h1>I'm <%= @pet.name %></h1>
+        <h1 class="pet-name">I'm <%= @pet.name %></h1>
         <%= link_to "Play with me!", new_pet_booking_path(@pet), class: "btn btn-flat-play" %>
       </div>
     </div>
-    <div class="cards">
+    <div class="pet-content">
       <div class="card-pet-info">
-        <h2 class="leader" >
+        <p class="leader" >
           <strong>Name:</strong> <%= @pet.name %>
-        </h2>
-        <h2 >
+        </p>
+        <p>
           <strong>Age:</strong> <%= @pet.age %> years old
-        </h2>
-        <h2 >
+        </p>
+        <p>
           <strong>Breed:</strong> <%= @pet.breed.capitalize %>
-        </h2>
-        <h2>
+        </p>
+        <p>
           <strong>Price:</strong> £20.00 per hour
-        </h2>
-        <h2 >
+        </p>
+        <p>
           <strong>Address:</strong> Pick me up from <%= @pet.location %>
-        </h2>
+        </p>
       <p>
         <% total = 0 %>
         <% if @pet.reviews.length > 0  %>
@@ -59,7 +59,7 @@
         </div>
       </div>
 
-      <div class="content-box text-center">
+      <div class="reviews">
         <h2>Reviews:</h2>
         <% @pet.reviews.each do |review| %>
           <p class ="review-card">
