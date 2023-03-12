@@ -1,4 +1,4 @@
-.petcard {
+.pet-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
@@ -97,7 +97,7 @@ p {
 }
 
 @media only screen and (max-width: 767px) {
-  .petcard {
+  .pet-card {
     grid-template-columns: 1fr;
   }
 
@@ -115,7 +115,7 @@ p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .petcard {
+  .pet-card {
     grid-template-columns: 1fr 1fr;
   }
 

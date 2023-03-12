@@ -13,13 +13,28 @@
   </div>
 
 <div class="categories">
-  <%= link_to pets_path do  %>
-      <button class="btn filter-yellow"><%= image_tag "dog_icon.svg" %> <br>  Dogs</button>
-      <button class="btn filter-yellow"><%= image_tag "hamster_icon.svg" %> <br>  Hamsters</button>
-      <button class="btn filter-yellow"><%= image_tag "cat_icon.svg" %> <br>  Cats</button>
-      <button class="btn filter-yellow"><%= image_tag "bird_icon.svg" %> <br>  Parrots</button>
-      <button class="btn filter-yellow"><%= image_tag "rabbit_icon.svg" %> <br>  Rabbits</button>
-      <button class="btn filter-yellow"><%= image_tag "turtle_icon.svg" %> <br>  Turtles</button>
+  <%= link_to pets_path(query: "Dog") do  %>
+    <button class="btn filter-yellow" onclick="filterSelection('dog')"><%= image_tag "dog_icon.svg" %> <br>Dogs</button>
+  <% end %>
+
+  <%= link_to pets_path(query: "Hamster") do  %>
+    <button class="btn filter-yellow"><%= image_tag "hamster_icon.svg" %> <br>Hamsters</button>
+  <% end %>
+
+  <%= link_to pets_path(query: "Cat") do  %>
+    <button class="btn filter-yellow" onclick="filterSelection('cat')"><%= image_tag "cat_icon.svg" %> <br>Cats</button>
+  <% end %>
+
+  <%= link_to pets_path(query: "Parrot") do  %>
+    <button class="btn filter-yellow" onclick="filterSelection('parrot')"><%= image_tag "bird_icon.svg" %> <br>Parrots</button>
+  <% end %>
+
+  <%= link_to pets_path(query: "Rabbit") do  %>
+    <button class="btn filter-yellow" onclick="filterSelection('rabbit')"><%= image_tag "rabbit_icon.svg" %> <br>Rabbits</button>
+  <% end %>
+
+  <%= link_to pets_path(query: "Turtle") do  %>
+    <button class="btn filter-yellow" onclick="filterSelection('turtle')"><%= image_tag "turtle_icon.svg" %> <br>Turtles</button>
   <% end %>
 </div>
 

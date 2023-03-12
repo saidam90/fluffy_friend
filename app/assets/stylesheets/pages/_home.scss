@@ -74,7 +74,7 @@ body {
 
 .categories {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
   .filter-yellow:hover {
     filter: invert(61%) sepia(96%) saturate(367%) hue-rotate(9deg)

@@ -2,10 +2,10 @@
 
   <h2 class="title">Pet List</h2>
   <p>Choose any of the pets below or add your pet to the list.</p>
-  <div class="petcard">
+  <div class="pet-card">
     <% @pets.each do |pet| %>
       <div class="mt-4">
-          <div class="card mb-3">
+          <div class="card mb-3" data-category="<%= pet.category %>">
             <%= link_to pet_path(pet), class: "card-img-top" do %>
             <%= cl_image_tag pet.photos[0].key %>
             <% end %>
