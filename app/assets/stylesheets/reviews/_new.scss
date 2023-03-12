@@ -1,0 +1,25 @@
+.container {
+  #new_review {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 30%;
+  }
+
+  #review_rating {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-size: 15px;
+    margin: 20px 0 20px 0;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 7px;
+    padding: 4px;
+  }
+
+  .btn-primary {
+    width: 150px;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+  }
+}
