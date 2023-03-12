@@ -98,6 +98,9 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  .categories {
+    flex-wrap: wrap;
+  }
   .banner {
     h1 {
       font-size: 60px;
@@ -107,6 +110,8 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .categories {
+    flex-wrap: wrap;
+
     .btn img {
       width: 90px;
       margin-top: 30px;

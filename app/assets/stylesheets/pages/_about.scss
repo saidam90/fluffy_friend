@@ -1,0 +1,16 @@
+.container {
+  .profile-container {
+    .mt-3 {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    .profile {
+      .rounded-circle {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+  }
+}
