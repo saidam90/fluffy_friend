@@ -8,12 +8,7 @@ before_action :set_pet, only: %i[new create]
   def create
     @review = Review.new(review_params)
     @review.pet = @pet
-
-    if @review.rating < 1 || @review.rating > 5
-      "Should be between 1 to 5"
-    else
-      @review.save
-    end
+    @review.save
     redirect_to pet_path(@pet)
   end
 

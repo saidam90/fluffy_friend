@@ -1,8 +1,8 @@
 <div class="container">
   <h1>New review</h1>
   <%= simple_form_for [@pet, @review] do |f| %>
-    <%= f.select :rating, (1..5), { prompt: "Select rating" } %>
-    <%= f.input :comment, required: true %>
+    <%= f.select :rating, (1..5), { prompt: "Select rating" }, :required => true %>
+    <%= f.input :comment, input_html: { class: "form-control", required: true } %>
     <%= f.submit "Submit review", class: "btn btn-primary" %>
   <% end %>
 </div>
