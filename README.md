@@ -118,5 +118,6 @@ Made with love by:
 - [Maxime Sidonio](https://github.com/MximeS)
 - [Dylan Dyhan](https://github.com/dillio523)
 
-![](https://komarev.com/ghpvc/?username=your-github-username)
+
+
 
