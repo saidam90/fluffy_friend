@@ -71,7 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_24_141611) do
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.string "comment"
-    t.bigint "pet_id", null: false
+    # t.bigint "pet_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["pet_id"], name: "index_reviews_on_pet_id"
@@ -97,5 +97,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_24_141611) do
   add_foreign_key "bookings", "pets"
   add_foreign_key "bookings", "users"
   add_foreign_key "pets", "users"
-  add_foreign_key "reviews", "pets"
+  # add_foreign_key "reviews", "pets"
 end

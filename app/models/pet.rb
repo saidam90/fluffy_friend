@@ -1,8 +1,8 @@
 class Pet < ApplicationRecord
-  has_many :bookings
-  belongs_to :user
-  has_many :reviews
-  has_many_attached :photos
+  has_many :bookings, dependent: :destroy
+  belongs_to :user, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many_attached :photos, dependent: :destroy
 
   # validates :category, presence: true
   # validates :breed, presence: true
