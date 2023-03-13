@@ -13,7 +13,7 @@
 </details>
 
 
-<h3>About the Project</h3>
+<h3>about-the-project</h3>
 
 Our team of 4 people built "Fluffy Friend" in just 1 week. Initially, we planned to create a project similar to Airbnb, but decided against simply cloning the concept. Instead, we developed the idea of a pet rental platform. This platform allows you to borrow a pet from someone if you're unable to commit to full-time pet ownership🐱🐶
 
@@ -27,6 +27,21 @@ Our team of 4 people built "Fluffy Friend" in just 1 week. Initially, we planned
 
 **Features**
 
+Searching for pets and booking:
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/74564476/224835566-a8b5fbd2-ca1f-4bf8-bb77-ea38ffaaa322.gif)
+
+Adding a pet:
+
+![adding a pet](https://user-images.githubusercontent.com/74564476/224836921-09ae08d6-406e-42a4-ba5f-d88bf6cf493c.gif)
+
+Leaving a review:
+
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/74564476/224839304-4cb68fb1-9e1e-4108-ba36-6595b5da9958.gif)
+
+Searching/filtering through available pets:
+
+![searching](https://user-images.githubusercontent.com/74564476/224838939-d3036115-ecbd-44c9-90cd-7cc1dd8ab938.gif)
 
 <h3>Tech Stack</h3>
 
@@ -34,25 +49,25 @@ Fluffy Friend is optimised for use on all devices.
 
 Frameworks & libraries used:
 
-- Ruby on Rails
-- JavaScript
-- Stimulus
-- CSS & SASS
-- Bootstrap
+- [Ruby on Rails](https://rubyonrails.org/)
+- [JavaScript](https://www.javascript.com/)
+- [Stimulus](https://stimulus.hotwired.dev/)
+- [CSS & SASS](https://sass-lang.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
 Version control & deployment
-- GitHub
-- Heroku
+- [GitHub](https://github.com/saidam90/fluffy_friend)
+- [Heroku](https://fluffy-friend.herokuapp.com/)
 
 <h3>Installation</h3>
 
-To run our app locally, you will need to have already installed Yarn and Rails. Check them with:
+To run our app locally, you will need to have already installed [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html). Check them with:
 ```
 $ yarn -v 
 $ rails --version
 ```
 
-If no version number is returned, please install Yarn and/or Rails before continuing.
+If no version number is returned, please install [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) and/or [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html) before continuing.
 
 **Dependencies**
 
@@ -78,16 +93,16 @@ $ rails s
 ```
 $ yarn build --watch
 ```
-Then go to localhost:3000.
+Then go to [localhost:3000](http://localhost:3000/)
 
 <h3>How to contribute</h3>
 
 Feel free to fork our repo and create a pull request with any changes you'd like to see us incorporate. We are open to suggestions🙂
 
 - Fork the Project
-- Create your Feature Branch (git checkout -b feature/AmazingFeature)
-- Commit your Changes (git commit -m 'Add some AmazingFeature')
-- Push to the Branch (git push origin feature/AmazingFeature)
+- Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+- Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+- Push to the Branch (`git push origin feature/AmazingFeature`)
 - Open a Pull Request
 
 <h3>License</h3>
@@ -98,7 +113,7 @@ Created as part of the Le Wagon Full Stack Web Development bootcamp. Feel free t
 
 Made with love by:
 
-- Saida Murtazali
-- Tommy Chan
-- Maxime Sidonio
-- Dylan Dyhan
+- [Saida Murtazali](https://github.com/saidam90)
+- [Tommy Chan](https://github.com/chantommyy)
+- [Maxime Sidonio](https://github.com/MximeS)
+- [Dylan Dyhan](https://github.com/dillio523)
