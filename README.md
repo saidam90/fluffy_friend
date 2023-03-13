@@ -3,17 +3,17 @@
 <details>
 <summary>Table of Contents</summary>
 
-  - About the Project
-  - Tech Stack
-  - Installation
-  - How to contribute
-  - License
-  - The team
+  - [About the Project](#about-the-project)
+  - [Tech Stack](#tech-stack)
+  - [Installation](#installation)
+  - [How to contribute](#how-to-contribute)
+  - [License](#license)
+  - [The team](#the-team)
   
 </details>
 
 
-<h3>about-the-project</h3>
+<h3>#About the project</h3>
 
 Our team of 4 people built "Fluffy Friend" in just 1 week. Initially, we planned to create a project similar to Airbnb, but decided against simply cloning the concept. Instead, we developed the idea of a pet rental platform. This platform allows you to borrow a pet from someone if you're unable to commit to full-time pet ownership🐱🐶
 
@@ -43,7 +43,8 @@ Searching/filtering through available pets:
 
 ![searching](https://user-images.githubusercontent.com/74564476/224838939-d3036115-ecbd-44c9-90cd-7cc1dd8ab938.gif)
 
-<h3>Tech Stack</h3>
+
+<h3>#Tech Stack</h3>
 
 Fluffy Friend is optimised for use on all devices.
 
@@ -59,7 +60,7 @@ Version control & deployment
 - [GitHub](https://github.com/saidam90/fluffy_friend)
 - [Heroku](https://fluffy-friend.herokuapp.com/)
 
-<h3>Installation</h3>
+<h3>#Installation</h3>
 
 To run our app locally, you will need to have already installed [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html). Check them with:
 ```
@@ -68,6 +69,7 @@ $ rails --version
 ```
 
 If no version number is returned, please install [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) and/or [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html) before continuing.
+
 
 **Dependencies**
 
@@ -84,6 +86,7 @@ Run the following command to create a database, load the schema, and initialize 
 $ rails db:create db:migrate db:seed
 ```
 
+
 **Launch**🚀
 
 Launch the app by running:
@@ -95,7 +98,8 @@ $ yarn build --watch
 ```
 Then go to [localhost:3000](http://localhost:3000/)
 
-<h3>How to contribute</h3>
+
+<h3>#How to contribute</h3>
 
 Feel free to fork our repo and create a pull request with any changes you'd like to see us incorporate. We are open to suggestions🙂
 
@@ -105,11 +109,11 @@ Feel free to fork our repo and create a pull request with any changes you'd like
 - Push to the Branch (`git push origin feature/AmazingFeature`)
 - Open a Pull Request
 
-<h3>License</h3>
+<h3>#License</h3>
 
 Created as part of the Le Wagon Full Stack Web Development bootcamp. Feel free to fork and enhance the platform.
 
-<h3>The team</h3>
+<h3>#The team</h3>
 
 Made with love by:
 
