@@ -77,6 +77,7 @@
 .map-review-container {
   display: flex;
   margin-top: 40px;
+  gap: 20px;
 
   .mapboxgl-map {
     width: 828px;
@@ -91,7 +92,7 @@
   }
 
   .reviews {
-    margin: 10px 143px;
+    margin: 0px 125px;
     display: flex;
     justify-content: center;
     font-family: "Poppins";
