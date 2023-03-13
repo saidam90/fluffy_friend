@@ -59,17 +59,22 @@
         </div>
       </div>
 
-      <div class="reviews">
-        <h2>Reviews:</h2>
-        <% @pet.reviews.each do |review| %>
-          <p class ="review-card">
-            "<%= review.comment.capitalize %>"
-            <br>
-            <% review.rating.times do |star| %>
-              <span class="fa fa-star checked"> </span>
-            <% end %>
+   <div class="reviews">
+    <h2>Reviews:</h2>
+    <% if @pet.reviews.any? %>
+      <% @pet.reviews.each do |review| %>
+        <p class="review-card">
+          "<%= review.comment.capitalize %>"
+          <br>
+          <% review.rating.times do |star| %>
+            <span class="fa fa-star checked"></span>
+          <% end %>
           </p>
         <% end %>
-      </div>
-    </div>
+    <% else %>
+      <p>No reviews yet.</p>
+    <% end %>
+  </div>
+
+  </div>
 </div>

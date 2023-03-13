@@ -2,12 +2,12 @@
   <h1>Add a pet</h1>
   <div class="new-pet">
     <%= simple_form_for [@pet] do |f| %>
-      <%= f.input :name %>
-      <%= f.input :category, collection: ["Dog", "Cat", "Hamster", "Rabbit", "Parrot", "Turtle"] %>
-      <%= f.input :breed %>
-      <%= f.input :age %>
-      <%= f.input :location %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :name, :required => true %>
+      <%= f.input :category, collection: ["Dog", "Cat", "Hamster", "Rabbit", "Parrot", "Turtle"], :required => true %>
+      <%= f.input :breed, :required => true %>
+      <%= f.input :age, :required => true %>
+      <%= f.input :location, :required => true %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true }, :required => true %>
       <%= f.submit "Add", class: "btn btn-primary text-white add-btn" %>
     <% end %>
   </div>
