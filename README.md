@@ -1,9 +1,11 @@
-<h2>Fluffy Friend</h2>
+# Fluffy Friend
+> Live demo [_here_](https://fluffy-friend.herokuapp.com/)
 
 <details>
 <summary>Table of Contents</summary>
 
   - [About the Project](#about-the-project)
+  - [Features](#features)
   - [Tech Stack](#tech-stack)
   - [Installation](#installation)
   - [How to contribute](#how-to-contribute)
@@ -13,7 +15,7 @@
 </details>
 
 
-<h3>#About the project</h3>
+## About the project
 
 The platform "Fluffy Friend" allows you to borrow a pet from someone if you're unable to commit to full-time pet ownership🐱🐶 Our team of 4 people built the project in 1 week. Initially, we planned to create a project similar to Airbnb, but decided against simply cloning the concept. Instead, we developed the idea of a pet rental platform. 
 
@@ -25,7 +27,7 @@ The platform "Fluffy Friend" allows you to borrow a pet from someone if you're u
 - Upload a pet you'd like to lend
 - Leave a review after your experience
 
-**Features**
+## Features
 
 Searching for pets and booking:
 
@@ -44,7 +46,7 @@ Searching/filtering through available pets:
 ![searching](https://user-images.githubusercontent.com/74564476/224838939-d3036115-ecbd-44c9-90cd-7cc1dd8ab938.gif)
 
 
-<h3>#Tech Stack</h3>
+## Tech Stack
 
 Fluffy Friend is optimised for use on all devices.
 
@@ -60,7 +62,7 @@ Version control & deployment
 - [GitHub](https://github.com/saidam90/fluffy_friend)
 - [Heroku](https://fluffy-friend.herokuapp.com/)
 
-<h3>#Installation</h3>
+## Installation
 
 To run our app locally, you will need to have already installed [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html). Check them with:
 ```
@@ -99,7 +101,7 @@ $ yarn build --watch
 Then go to [localhost:3000](http://localhost:3000/)
 
 
-<h3>#How to contribute</h3>
+## How to contribute
 
 Feel free to fork our repo and create a pull request with any changes you'd like to see us incorporate. We are open to suggestions🙂
 
@@ -109,11 +111,11 @@ Feel free to fork our repo and create a pull request with any changes you'd like
 - Push to the Branch (`git push origin feature/AmazingFeature`)
 - Open a Pull Request
 
-<h3>#License</h3>
+## License
 
 Created as part of the Le Wagon Full Stack Web Development bootcamp. Feel free to fork and enhance the platform.
 
-<h3>#The team</h3>
+## The team
 
 Made with love by:
 
