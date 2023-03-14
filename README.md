@@ -15,7 +15,7 @@
 
 <h3>#About the project</h3>
 
-Our team of 4 people built "Fluffy Friend" in just 1 week. Initially, we planned to create a project similar to Airbnb, but decided against simply cloning the concept. Instead, we developed the idea of a pet rental platform. This platform allows you to borrow a pet from someone if you're unable to commit to full-time pet ownership🐱🐶
+The platform "Fluffy Friend" allows you to borrow a pet from someone if you're unable to commit to full-time pet ownership🐱🐶 Our team of 4 people built the project in 1 week. Initially, we planned to create a project similar to Airbnb, but decided against simply cloning the concept. Instead, we developed the idea of a pet rental platform. 
 
 *How it works:*
 
