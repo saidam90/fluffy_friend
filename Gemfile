@@ -14,7 +14,7 @@ gem "rails", "~> 7.0.4"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+gem 'pg', '~> 1.5', '>= 1.5.3'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -88,6 +88,6 @@ gem "dotenv-rails", groups: [:development, :test]
 
 gem "cloudinary"
 
-gem "dockerfile-rails", ">= 1.2", :group => :development
+# gem "dockerfile-rails", ">= 1.2", :group => :development
 
-gem "redis", "~> 5.0"
+# gem "redis", "~> 5.0"
