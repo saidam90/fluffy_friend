@@ -296,7 +296,7 @@ DEPENDENCIES
   geocoder
   jbuilder
   jsbundling-rails
-  pg (~> 1.5, >= 1.5.3)
+  pg
   pg_search
   puma (~> 5.0)
   rails (~> 7.0.4)
