@@ -79,15 +79,8 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-# production:
-#   <<: *default
-#   database: fluffy_friend_production
-#   username: fluffy_friend
-#   password: <%= ENV["FLUFFY_FRIEND_DATABASE_PASSWORD"] %>
-
 production:
   <<: *default
-  adapter: postgresql
-  url: <%= ENV['URL'] %>
-  password: <%= ENV['PASSWORD'] %>
   database: fluffy_friend_production
+  username: fluffy_friend
+  password: <%= ENV["FLUFFY_FRIEND_DATABASE_PASSWORD"] %>
