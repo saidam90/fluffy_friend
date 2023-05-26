@@ -92,5 +92,4 @@ production:
   port: 5432
   adapter: postgresql
   url: <%= ENV['SUPABASE_URL'] %>
-  key: <%= ENV['SUPABASE_KEY'] %>
   database: postgres
