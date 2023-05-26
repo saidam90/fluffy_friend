@@ -88,7 +88,7 @@ test:
 
 production:
   <<: *default
-  host: localhost
+  host: db.iaraxjsfygumprwtkcpb.supabase.co
   port: 5432
   adapter: postgresql
   url: <%= ENV['SUPABASE_URL'] %>
