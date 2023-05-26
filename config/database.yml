@@ -90,4 +90,4 @@ production:
   adapter: postgresql
   url: <%= ENV['URL'] %>
   password: <%= ENV['PASSWORD'] %>
-  database: postgres
+  database: fluffy_friend_production
