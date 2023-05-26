@@ -20,6 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['SUPABASE_URL'] %>
+  database: postgres
 
 development:
   <<: *default
@@ -79,8 +81,13 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# production:
+#   <<: *default
+#   database: fluffy_friend_production
+#   username: fluffy_friend
+#   password: <%= ENV["FLUFFY_FRIEND_DATABASE_PASSWORD"] %>
+
 production:
   <<: *default
-  database: fluffy_friend_production
-  username: fluffy_friend
-  password: <%= ENV["FLUFFY_FRIEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['SUPABASE_URL'] %>
+  key: <%= ENV['SUPABASE_KEY'] %>
