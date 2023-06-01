@@ -89,3 +89,5 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 
 # gem "dockerfile-rails", ">= 1.2", :group => :development
+
+gem 'rails_12factor', group: :production
